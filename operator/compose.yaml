@@ -3,7 +3,9 @@ version: '3'
 services:
   operator:
     container_name: operator
-    build: ./Dockerfile
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
     user: node
     working_dir: /home/node/operator/web
     volumes:
