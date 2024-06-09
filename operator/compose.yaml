@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  operator:
+    container_name: operator
+    build: ./Dockerfile
+    user: node
+    working_dir: /home/node/operator/web
+    volumes:
+      - ./web:/home/node/operator/web
+    ports:
+      - 5173:5173
+    tty: true
