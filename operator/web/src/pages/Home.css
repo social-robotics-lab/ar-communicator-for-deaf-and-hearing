@@ -7,7 +7,15 @@
     margin: 30px 0 30px 0;
 }
 
+#home .updateButton{
+    background-color: white;
+    color: var(--color-link);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #home .buttons{
     display: flex;
     justify-content: space-evenly;
+    margin: 50px 0 20px 0;
 }
