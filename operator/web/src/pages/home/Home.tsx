@@ -1,4 +1,4 @@
-import UserSelectButton from "../components/userSelectButton/UserSelectButton";
+import UserSelectButton from "../../components/userSelectButton/UserSelectButton";
 import "./Home.css"
 
 const Home:React.FC=()=>{
