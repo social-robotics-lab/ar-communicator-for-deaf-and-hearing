@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import "./UserSelectButton.css"
 
-const UserSelectButton:React.FC<{userIndex:number,isDHH:boolean}>=({userIndex,isDHH})=>{
+const UserSelectButton:React.FC<{userKey:string,isDHH:boolean|undefined}>=({userKey,isDHH})=>{
     return(
         <div id="userSelectButton">
-            <Link to={"/user"+String(userIndex)}>
+            <Link to={"/"+userKey}>
                 <button>
-                    <h3>User {userIndex}</h3>
+                    <h3>{userKey}</h3>
                     <p>is DHH : {String(isDHH)}</p>
                 </button>
             </Link>
