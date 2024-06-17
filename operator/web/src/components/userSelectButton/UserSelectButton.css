@@ -6,3 +6,7 @@
 #userSelectButton h3{
     font-size: 1.4em;
 }
+
+#userSelectButton button{
+    margin: 0;
+}
