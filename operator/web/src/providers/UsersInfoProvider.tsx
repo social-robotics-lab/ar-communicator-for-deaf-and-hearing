@@ -1,6 +1,6 @@
 import { ReactNode, Dispatch, SetStateAction, createContext, useState } from "react";
 
-type UsersInfoType={
+export type UsersInfoType={
     user1:{isDHH:boolean},
     user2:{isDHH:boolean},
     user3:{isDHH:boolean}
