@@ -1,4 +1,6 @@
-import { ReactNode, Dispatch, SetStateAction, createContext, useState } from "react";
+import { ReactNode, Dispatch, SetStateAction, createContext, useState, useEffect } from "react";
+import { db } from "../firebase/FirebaseConfig";
+import { ref, onValue } from "firebase/database";
 
 export type UsersInfoType={
     user1:{isDHH:boolean},
@@ -24,6 +26,20 @@ export const UsersInfoProvider:React.FC<PropsType>=(props)=>{
             user3:{isDHH:true}
         }
     );
+
+    useEffect(()=>{
+        const dataRef=ref(db,"/");
+        return onValue(dataRef,(snapshot)=>{
+            const data=snapshot.val();
+            setUsersInfo(
+                {
+                    user1:{isDHH:data.user1.isDHH},
+                    user2:{isDHH:data.user2.isDHH},
+                    user3:{isDHH:data.user3.isDHH}
+                });
+        })
+    },[]);
+
     return(
         <UsersInfoContext.Provider value={{usersInfo,setUsersInfo}}>
             {children}
