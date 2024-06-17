@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Home from "../pages/home/Home";
-import User1 from "../pages/user1/User1";
-import User2 from "../pages/user2/User2";
-import User3 from "../pages/user3/User3";
+import User1 from "../pages/user/User1";
+import User2 from "../pages/user/User2";
+import User3 from "../pages/user/User3";
 
 const Router:React.FC=()=>{
     return (
