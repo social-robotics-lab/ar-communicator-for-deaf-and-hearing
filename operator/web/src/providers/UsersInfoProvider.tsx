@@ -1,5 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction, createContext, useState, useEffect } from "react";
-import { db } from "../firebase/FirebaseConfig";
+import { db } from "../firebase/firebaseConfig";
 import { ref, onValue } from "firebase/database";
 
 export type UsersInfoType={
