@@ -28,16 +28,20 @@ export const UsersInfoProvider:React.FC<PropsType>=(props)=>{
     );
 
     useEffect(()=>{
-        const dataRef=ref(db,"/");
-        return onValue(dataRef,(snapshot)=>{
-            const data=snapshot.val();
-            setUsersInfo(
-                {
-                    user1:{isDHH:data.user1.isDHH},
-                    user2:{isDHH:data.user2.isDHH},
-                    user3:{isDHH:data.user3.isDHH}
-                });
-        })
+        try{
+            const dataRef=ref(db,"/");
+            return onValue(dataRef,(snapshot)=>{
+                const data=snapshot.val();
+                setUsersInfo(
+                    {
+                        user1:{isDHH:data.user1.isDHH},
+                        user2:{isDHH:data.user2.isDHH},
+                        user3:{isDHH:data.user3.isDHH}
+                    });
+            });
+        }catch(error:any){
+            console.log("firebase error: "+error);
+        }
     },[]);
 
     return(
