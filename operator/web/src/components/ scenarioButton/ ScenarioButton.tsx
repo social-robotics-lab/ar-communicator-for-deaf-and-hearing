@@ -1,12 +1,22 @@
-import { CSSProperties, useState } from "react";
-import "./ScenarioButton.css"
+import { CSSProperties, useContext, useState } from "react";
+import "./ScenarioButton.css";
+import { writeMessageData } from "../../firebase/writeMessageData";
+import { UsersInfoContext } from "../../providers/UsersInfoProvider";
 
-const ScenarioButton:React.FC<{scenario:string}>=({scenario})=>{
+const ScenarioButton:React.FC<{userKey:string,scenario:string}>=({userKey,scenario})=>{
+    const {usersInfo}=useContext(UsersInfoContext);
     const [styleCheckMark,setStyleCheckMark]=useState<CSSProperties>({color:"#d7d7d7"});
 
     const handleClick=():void=>{
-        const styleDone:CSSProperties={color:"#12d744"};  
-        setStyleCheckMark(styleDone); 
+        const styleDone:CSSProperties={color:"#12d744"};
+        try{
+            if(userKey==="user1"||userKey==="user2"||userKey==="user3"){
+                writeMessageData(userKey,usersInfo[userKey]["isDHH"],scenario);
+            }
+            setStyleCheckMark(styleDone); 
+        }catch(error:any){
+            console.log(error);
+        };
     };
     
     return(

@@ -1,10 +1,11 @@
-// import { getDatabase, ref, set } from "firebase/database";
+import { ref, set } from "firebase/database";
+import { db } from "./firebaseConfig";
+import { useContext } from "react";
+import { UsersInfoContext } from "../providers/UsersInfoProvider";
 
-// function (userId, name, email, imageUrl) {
-//   const db = getDatabase();
-//   set(ref(db, 'users/' + userId), {
-//     username: name,
-//     email: email,
-//     profile_picture : imageUrl
-//   });
-// }
+export const writeMessageData=(userKey:string,isDHH:boolean,message:string)=>{
+    set(ref(db,userKey+"/"),{
+        isDHH:isDHH,
+        message:message
+    });
+};

@@ -10,7 +10,7 @@ const User1:React.FC=()=>{
         <div className="user">
             <UserHeader userIndex={1} isDHH={usersInfo.user1.isDHH} />
             <div>
-                <ScenarioButton scenario="シナリオ" />
+                <ScenarioButton userKey="user1" scenario="シナリオ１−１" />
             </div>
         </div>
     )
