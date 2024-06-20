@@ -1,18 +1,31 @@
 import "./User.css"
 import ScenarioButton from "../../components/ scenarioButton/ ScenarioButton";
 import UserHeader from "../../components/userHeader/UserHeader";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UsersInfoContext } from "../../providers/UsersInfoProvider";
-import InputScenarioFileForm from "../../components/inputScenarioFileForm/InputScenarioFileForm";
+import InputScenarioFileForm, { ScenarioListType } from "../../components/inputScenarioFileForm/InputScenarioFileForm";
 
 const User1:React.FC=()=>{
     const {usersInfo}=useContext(UsersInfoContext);
+    const [scenarioList,setScenarioList]=useState<ScenarioListType>();
+
     return(
         <div className="user">
             <UserHeader userIndex={1} isDHH={usersInfo.user1.isDHH} />
-            <InputScenarioFileForm />
+            <InputScenarioFileForm setScenarioList={setScenarioList}/>
             <div>
-                <ScenarioButton userKey="user1" scenario="シナリオ１−１" />
+                {scenarioList?.map((scenario,index)=>{
+                    return (
+                    <span key={index}>
+                        {scenario.user===1?
+                            <ScenarioButton userKey="user1" scenario={scenario.message} />
+                            :<div className="otherMessage">
+                                <span className="otherData">user{scenario.user}</span>
+                                <span className="otherData">{scenario.message}</span>
+                            </div>}
+                    </span>
+                    )
+                })}
             </div>
         </div>
     )
