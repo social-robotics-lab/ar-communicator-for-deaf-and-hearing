@@ -1,0 +1,5 @@
+# vscode setting files
+*.vscode/
+
+# iOS system files
+*.DS_Store
