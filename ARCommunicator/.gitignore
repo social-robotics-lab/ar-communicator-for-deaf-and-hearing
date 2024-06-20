@@ -74,3 +74,7 @@ crashlytics-build.properties
 # Asset Store files
 /[Aa]ssets/*
 !/[Aa]ssets/Project/
+
+## Android SDK dependencies files
+ProjectSettings/AndroidResolverDependencies.xml
+ProjectSettings/GvhProjectSettings.xml
