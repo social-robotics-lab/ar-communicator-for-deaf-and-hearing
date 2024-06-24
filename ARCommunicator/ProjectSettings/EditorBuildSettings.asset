@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6c93b32e7cc31f642a01324a72982914, type: 2}
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: d52b51ff98d66e440856221f4d5dd09f, type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: dc023ae2f0ba11443a217818d66dae4a, type: 2}
-    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 0d4ca4dc4aa6c4f499f51d34c1f7541e, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 39b4cf78f407f2943b11e91197cc4bf3, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1f912988cdc1e48b9a717c6ec213f756, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 3d92073b3b28745088722b901abc0a76, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: c5f285cd4bcf349228aeba273968087a, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 42233d550ec8344ddaf5918b2406bacd, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 0acf3318b58344811852f82e7473e2ab, type: 2}
