@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/Test/Kondo/KondoTest.unity
     guid: 046d6a5f7efbbab43aad911462f2b049
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9daa9b05cb5a14f429b76502eaea8773, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 68d06eb5716083341ae7155974641487, type: 2}
