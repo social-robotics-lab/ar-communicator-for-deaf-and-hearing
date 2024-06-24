@@ -1,0 +1,16 @@
+.user{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.user .otherData{
+    font-size: medium;
+    font-weight: bold;
+    padding: 16px 4px 16px 4px;
+    color: #545454;
+}
+
+.user .otherMessage{
+    display: flex;
+    justify-content: center;
+}

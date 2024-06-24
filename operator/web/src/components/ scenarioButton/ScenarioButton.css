@@ -1,0 +1,20 @@
+#scenarioButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scenarioButton span{
+    margin-right: 14px;
+}
+#scenarioButton svg{
+    width: 40px;
+    height: 40px;
+}
+
+#scenarioButton button{
+    background-color: white;
+    color: var(--color-link);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
