@@ -1,0 +1,14 @@
+#home{
+    text-align: center;
+    margin: 80px 0 80px 0;
+}
+
+#home h2{
+    margin: 100px 0 100px 0;
+}
+
+#home .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0 20px 0;
+}
