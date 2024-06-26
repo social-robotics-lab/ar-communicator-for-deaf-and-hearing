@@ -57,7 +57,7 @@
 ## :robot: AndroidアプリをFirebaseに登録する
 [アプリをFirebaseに登録する｜Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#register-app) を参考にして、AndroidアプリをFirebaseに登録します。
 
-1. プロジェクトの概要ページの中央で、Unityアイコンをクリックして設定ワークフローを起動します。
+1. プロジェクトの概要ページの中央で、[Unityアイコン] をクリックして設定ワークフローを起動します。
 2. [Androidアプリとして登録] にチェックを入れます。
 3. Androidパッケージ名に `com.DefaultCompany.ARCommunicator` と入力します。
 4. アプリのニックネームに任意のアプリ名を入力して、[アプリを登録] をクリックします。
