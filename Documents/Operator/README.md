@@ -1,6 +1,7 @@
 # :technologist: 操作画面の使用方法
 
 # 🚀 Quick Start
+以下が操作画面のセットアップ手順です。
 
 ## :whale: Docker Desktopをインストールする
 [Docker Desktop - Docker](https://www.docker.com/ja-jp/products/docker-desktop/) からDocker Desktopをインストールします。

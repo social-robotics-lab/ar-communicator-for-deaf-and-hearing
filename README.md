@@ -17,6 +17,7 @@
 
 
 # :rocket: クイックスタート
+以下が本システムのセットアップ手順です。
 
 ## :diamond_shape_with_a_dot_inside: Unityをインストールする
 1. [Download the Unity Hub - Unity](https://unity.com/ja/download) からUnity Hubをダウンロードします。
