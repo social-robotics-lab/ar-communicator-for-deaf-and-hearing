@@ -3,22 +3,21 @@
 ### 対応デバイス
 * Meta Quest3
 
-# 📚 Docs
-* [:rocket: クイックスタート](#rocket-クイックスタート)
-    1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#diamond_shape_with_a_dot_inside-unityをインストールする)
-    2. [:file_folder: プロジェクトを追加する](#file_folder-プロジェクトを追加する)
-    3. [:fire: Firebaseプロジェクトを作成する](#fire-firebaseプロジェクトを作成する)
-    4. [:fire: Firebase Realtime Databaseを作成する](#fire-firebase-realtime-databaseを作成する)
-    5. [:robot: AndroidアプリをFirebaseに登録する](#robot-androidアプリをfirebaseに登録する)
-    6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
-    7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
-    8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-* [:technologist: 操作画面の使用方法](Documents/Operator/README.md)
-    * [:rocket: クイックスタート](Documents/Operator//README.md#rocket-クイックスタート)
-        1. [:whale: Docker Desktopをインストールする](Documents/Operator//README.md#whale-docker-desktopをインストールする)
-        2. [:globe_with_meridians: ウェブアプリをFirebaseに登録する](Documents/Operator//README.md#globe_with_meridians-ウェブアプリをfirebaseに登録する)
-        3. [:nut_and_bolt: 環境変数を設定する](Documents/Operator//README.md#nut_and_bolt-環境変数を設定する)
-        4. [:runner: 操作画面を起動する](Documents/Operator//README.md#runner-操作画面を起動する)
+# 📚 ドキュメント
+**[:rocket: クイックスタート](#rocket-クイックスタート)**
+1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#diamond_shape_with_a_dot_inside-unityをインストールする)
+2. [:file_folder: プロジェクトを追加する](#file_folder-プロジェクトを追加する)
+3. [:fire: Firebaseプロジェクトを作成する](#fire-firebaseプロジェクトを作成する)
+4. [:fire: Firebase Realtime Databaseを作成する](#fire-firebase-realtime-databaseを作成する)
+5. [:robot: AndroidアプリをFirebaseに登録する](#robot-androidアプリをfirebaseに登録する)
+6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
+7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
+8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
+
+
+**[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
+* [:books: ドキュメント](Documents/Operator/README.md#books-ドキュメント)
+* [:rocket: クイックスタート](Documents/Operator//README.md#rocket-クイックスタート)
 
 
 # :rocket: クイックスタート

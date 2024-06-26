@@ -1,11 +1,11 @@
 # :technologist: 操作画面の使用方法
 
-# :books: Docs
-* [:rocket: クイックスタート](#rocket-クイックスタート)
-    1. [:whale: Docker Desktopをインストールする](#whale-docker-desktopをインストールする)
-    2. [:globe_with_meridians: ウェブアプリをFirebaseに登録する](#globe_with_meridians-ウェブアプリをfirebaseに登録する)
-    3. [:nut_and_bolt: 環境変数を設定する](#nut_and_bolt-環境変数を設定する)
-    4. [:runner: 操作画面を起動する](#runner-操作画面を起動する)
+# :books: ドキュメント
+**[:rocket: クイックスタート](#rocket-クイックスタート)**
+1. [:whale: Docker Desktopをインストールする](#whale-docker-desktopをインストールする)
+2. [:globe_with_meridians: ウェブアプリをFirebaseに登録する](#globe_with_meridians-ウェブアプリをfirebaseに登録する)
+3. [:nut_and_bolt: 環境変数を設定する](#nut_and_bolt-環境変数を設定する)
+4. [:runner: 操作画面を起動する](#runner-操作画面を起動する)
 
 # :rocket: クイックスタート
 以下が操作画面のセットアップ手順です。
