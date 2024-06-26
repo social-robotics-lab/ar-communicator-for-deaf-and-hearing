@@ -47,10 +47,11 @@
 
 3. `.env.local`のイコール（=）の後ろ全てをFirebaseウェブアプリの下記の値に変更します。
 
-    ![FirebaseSDKExample](Images/FirebaseSDKExample.png)
+    <img width="400" alt="FirebaseSDKExample" src="Images/FirebaseSDKExample.png"></img>
 
     書き方の例 ）
-        ![EnvFileExample](Images/EnvFileExample.png)
+        
+    <img width="400" alt="EnvFileExample" src="Images/EnvFileExample.png"></img>
 
 
 ## :runner: 操作画面を起動する
