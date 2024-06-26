@@ -3,10 +3,10 @@
 # 🚀 Quick Start
 
 ## :whale: Docker Desktopをインストールする
-[Docker Desktop｜Docker](https://www.docker.com/ja-jp/products/docker-desktop/) からDocker Desktopをインストールします。
+[Docker Desktop - Docker](https://www.docker.com/ja-jp/products/docker-desktop/) からDocker Desktopをインストールします。
 
 ## :globe_with_meridians: ウェブアプリをFirebaseに登録する
-[アプリを登録する｜Firebaseドキュメント](https://firebase.google.com/docs/web/setup?hl=ja#register-app) を参考にして、ウェブアプリをFirebaseに登録します。
+[アプリを登録する - Firebaseドキュメント](https://firebase.google.com/docs/web/setup?hl=ja#register-app) を参考にして、ウェブアプリをFirebaseに登録します。
 
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) から使用するプロジェクトを開き、中央にある [ウェブアイコン] をクリックして設定ワークフローを起動します。
 
