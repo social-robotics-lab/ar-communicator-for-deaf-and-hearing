@@ -58,7 +58,7 @@
 3. 任意のデータベースのロケーションを選択して、[完了] をクリックします。
 4. 下記のようにデータベースを設定します。
 
-    ![RealtimeDatabase](Documents/Images/RealtimeDatabase.png)
+    <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
 
 ## :robot: AndroidアプリをFirebaseに登録する
 [アプリをFirebaseに登録する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#register-app) を参考にして、AndroidアプリをFirebaseに登録します。
