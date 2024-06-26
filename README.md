@@ -18,6 +18,7 @@
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
 * [:books: ドキュメント](Documents/Operator/README.md#books-ドキュメント)
 * [:rocket: クイックスタート](Documents/Operator//README.md#rocket-クイックスタート)
+* [:book: 操作画面マニュアル](Documents/Operator/Manual.md)
 
 
 # :rocket: クイックスタート
