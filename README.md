@@ -13,7 +13,7 @@
     * [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
     * [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
     * [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-* [:technologist: 操作画面の使用方法](operator/web/README.md)
+* [:technologist: 操作画面の使用方法](Documents/Operator/README.md)
 
 
 # :rocket: クイックスタート
