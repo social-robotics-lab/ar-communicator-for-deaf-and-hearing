@@ -51,7 +51,7 @@ public class DataBaseScript : MonoBehaviour
 
     void AttachValueChangedListeners()
     {
-        // ?e???[?U?[??message?t?B?[???h?????X?????????????B
+        // 各ユーザーのmessageフィールドの変更を監視します。
         AttachMessageListener("user1");
         AttachMessageListener("user2");
         AttachMessageListener("user3");
