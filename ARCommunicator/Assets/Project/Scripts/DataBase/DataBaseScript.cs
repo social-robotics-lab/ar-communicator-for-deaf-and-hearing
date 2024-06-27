@@ -21,16 +21,16 @@ public class DataBaseScript : MonoBehaviour
             var dependencyStatus = task.Result;
             if (dependencyStatus == Firebase.DependencyStatus.Available)
             {
-                // FirebaseAppのデフォルトインスタンスを取得します。
+                // FirebaseApp???????????????????
                 app = Firebase.FirebaseApp.DefaultInstance;
 
-                // Firebaseの準備が整ったことを示すフラグをセットします。
+                // Firebase???????????????????????
                 Debug.Log("Firebase is ready to use.");
 
-                // データベースのルート参照を取得
+                // ???????????????
                 databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
-                // 各ユーザーのmessageフィールドの変更を監視します。
+                // ??????message???????????????
                 AttachValueChangedListeners();
             }
             else
@@ -51,7 +51,7 @@ public class DataBaseScript : MonoBehaviour
 
     void AttachValueChangedListeners()
     {
-        // 各ユーザーのmessageフィールドの変更を監視します。
+        // ?e???[?U?[??message?t?B?[???h?????X?????????????B
         AttachMessageListener("user1");
         AttachMessageListener("user2");
         AttachMessageListener("user3");
@@ -69,7 +69,7 @@ public class DataBaseScript : MonoBehaviour
 
             if (args.Snapshot != null && args.Snapshot.Exists)
             {
-                // 取得したデータの処理
+                // ?????????f?[?^??????
                 Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
             }
             else
@@ -87,7 +87,7 @@ public class DataBaseScript : MonoBehaviour
         
         if (databaseReference != null)
         {
-            // 各ユーザーのmessageフィールドの変更監視を解除します。
+            // ?e???[?U?[??message?t?B?[???h?????X?????????????????B
             DetachMessageListener("user1");
             DetachMessageListener("user2");
             DetachMessageListener("user3");
