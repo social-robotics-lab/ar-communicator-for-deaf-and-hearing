@@ -69,7 +69,7 @@ public class DataBaseScript : MonoBehaviour
 
             if (args.Snapshot != null && args.Snapshot.Exists)
             {
-                // ?????????f?[?^??????
+                // 取得したデータの処理
                 Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
             }
             else
@@ -78,8 +78,6 @@ public class DataBaseScript : MonoBehaviour
             }
         };
     }
-
-    
     
 
     void OnDestroy()
@@ -87,7 +85,7 @@ public class DataBaseScript : MonoBehaviour
         
         if (databaseReference != null)
         {
-            // ?e???[?U?[??message?t?B?[???h?????X?????????????????B
+            // 各ユーザーのmessageフィールドの変更監視を解除します。
             DetachMessageListener("user1");
             DetachMessageListener("user2");
             DetachMessageListener("user3");
