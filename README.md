@@ -88,4 +88,4 @@
 4. Import Unity Package ウィンドウで [Import] をクリックします。
 
 ## :package: 依存パッケージをインポートする
-* [UniVRM (v0.123.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.123.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
+* [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
