@@ -45,7 +45,7 @@
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で [プロジェクトを追加] をクリックします。
 2. 任意のプロジェクト名を入力して、[続行] をクリックします。
 3. Googleアナリティクスを有効にして、Firebaseプロジェクトを作成します。
-4. 処理が完了すると、FirebaseコンソールにFirebaseプロジェクトの概要ページが表示されます。
+4. 処理が完了すると、[Firebaseコンソール](https://console.firebase.google.com/?hl=ja) にFirebaseプロジェクトの概要ページが表示されます。
 
 ## :fire: Firebase Realtime Databaseを作成する
 [データベースを作成する - Firebaseドキュメント](https://firebase.google.com/docs/database/unity/start?hl=ja#create_a_database) を参考にして、Firebase Realtime Databaseを作成します。
@@ -71,14 +71,14 @@
 ## :wrench: Firebase構成ファイルを追加する
 [Firebase構成ファイルを追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#add-config-file) を参考にして、Firebase構成ファイルを追加します。
 
-1. Firebaseコンソールで`google-services.json` をダウンロードします。
+1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`google-services.json` をダウンロードします。
 2. Unityプロジェクトで、`Assets`フォルダの中に`StreamingAssets`フォルダを作成します。
 3. `StreamingAssets`フォルダの中に `google-services.json`を移動します。
 
 ## :toolbox: Firebase Unity SDKを追加する
 [Firebase Unity SDK を追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#add-sdks) を参考にして、Firebase Unity SDKを追加します。
 
-1. Firebaseコンソールで`Firebase Unity SDK` をダウンロードし、SDKを解凍します。
+1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`Firebase Unity SDK` をダウンロードし、SDKを解凍します。
 2. Unityプロジェクトで、[Assets] > [Import Package] > [Custom Package] を選択します。
 3. 解凍したSDKから、以下のFirebaseプロダクトを選択します。
 
