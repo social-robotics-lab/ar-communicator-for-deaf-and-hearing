@@ -1,0 +1,12 @@
+#userSelectButton button{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#userSelectButton h3{
+    font-size: 1.4em;
+}
+
+#userSelectButton button{
+    margin: 0;
+}
