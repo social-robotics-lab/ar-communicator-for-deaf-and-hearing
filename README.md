@@ -106,7 +106,7 @@
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
 > [!NOTE]\
-> プロジェクト名・組織名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
+> プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
 > <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
 
 > [!WARNING]\
