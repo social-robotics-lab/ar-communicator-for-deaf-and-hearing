@@ -13,6 +13,8 @@
 6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
 7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
 8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
+9. [:cloud: Unity Cloudと連携する](#cloud-unity-cloudと連携する)
+10. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
 
 
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
@@ -85,7 +87,37 @@
     * FirebaseAnalytics.unitypackage
     * FirebaseDatabase.unitypackage
 
-4. Import Unity Package ウィンドウで [Import] をクリックします。
+4. Import Unity Packageウィンドウで [Import] をクリックします。
 
 ## :package: 依存パッケージをインポートする
 * [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
+
+## :cloud: Unity Cloudと連携する
+1. Unity Hubでプロジェクトの左にあるメニューバーから、[Connect to Unity Cloud] を選択します。
+2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
+3. Unity Cloudでプロジェクト名・プロジェクト名・プロジェクトIDを確認します。
+4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・プロジェクト名・プロジェクトIDと一致していることを確認します。
+
+    <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
+
+    * プロジェクト名・プロジェクト名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] 設定し、[Link Unity project to cloud project] を選択する
+
+        <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
+
+## :hammer_and_wrench: ビルド＆実行する
+1. [Edit] > [Project Settings] > [Meta XR] > [Android] を選択します。
+2. チェックリストに Outstanding Issues と Recommended Items がある場合、[Fix All] と [Apply All] を選択します。
+
+    <img width="600" src="Documents/Images/MetaXRChecklistExample.png"></img>
+
+3. [Edit] > [Project Settings] > [Player] > [Android] > [Other Settings] を選択します。
+4. Identification の Minimum API Level を [Android 12.0 (12L,API level 32)] 、Target API Level を [API level 34] に設定します。
+
+    <img width="600" src="Documents/Images/AndroidAPILevel.png"></img>
+
+5. [File] > [Build Settings] > [Android] を選択し、 [Switch Platform] をクリックします。
+6. USB-Cケーブルを使用してMeta Quest3をコンピューターに接続します。
+7. Meta Quest3で、[Allow USB Debugging (USBデバッグを許可)]をクリックします。
+8. Scenes In BuildとAndroidビルド設定を以下のように変更します。
+
+9. [Build And Run] をクリックします。
