@@ -31,9 +31,9 @@ public class ListenMessageChangedScript : MonoBehaviour
     void AttachValueChangedListeners()
     {
         // 各ユーザーのmessageフィールドの変更を監視します。
-        AttachMessageListener("user1");
-        AttachMessageListener("user2");
-        AttachMessageListener("user3");
+        //AttachMessageListener("user1");
+        //AttachMessageListener("user2");
+        //AttachMessageListener("user3");
     }
 
     void AttachMessageListener(string userId)
