@@ -102,23 +102,23 @@
 2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
 3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
 4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・組織名・プロジェクトIDと一致していることを確認します。
-    
-    > [!IMPORTANT]
-    > UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。 
 
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
-    * プロジェクト名・組織名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] 設定し、[Link Unity project to cloud project] を選択する
+> [!NOTE]\
+> プロジェクト名・組織名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
+> <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
 
-        <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
+> [!WARNING]\
+> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
 
 ## :hammer_and_wrench: ビルド＆実行する
-> [!IMPORTANT]
-> Meta Quest3でプロジェクトを実行するには、Meta Quest3を開発者モードに変更してください。
+> [!IMPORTANT]\
+> Meta Quest3でプロジェクトを実行するには、Meta Quest3を開発者モードに変更してください。\
 > 詳しくは、[開発とテスト用にデバイスを有効にする - Oculus Developer](https://developer.oculus.com/documentation/unity/unity-enable-device/) をご覧ください。
 
-> [!WARNING]
-> 過去に同じヘッドセットでこのプロジェクトを実行したことがある場合、ヘッドセットにこのプロジェクトのアプリ（ARCommunicator）が残っていると、ビルドに失敗する場合があります。
+> [!WARNING]\
+> 過去に同じヘッドセットでこのプロジェクトを実行したことがある場合、ヘッドセットにこのプロジェクトのアプリ（ARCommunicator）が残っていると、ビルドに失敗する場合があります。\
 > アプリの削除は、ヘッドセットで [アプリ] > [提供元不明] を選択し、 ARCommunicator の右にあるメニューバーから [削除] を選択してください。
 
 1. [Edit] > [Project Settings] > [Meta XR] > [Android] を選択します。
