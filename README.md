@@ -3,6 +3,11 @@
 ### 対応デバイス
 * Meta Quest3
 
+### 開発環境
+* MacBook Air
+* Windows 10
+* Windows 11
+
 # 📚 ドキュメント
 **[:rocket: クイックスタート](#rocket-クイックスタート)**
 1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#diamond_shape_with_a_dot_inside-unityをインストールする)
@@ -93,18 +98,29 @@
 * [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
 
 ## :cloud: Unity Cloudと連携する
-1. Unity Hubでプロジェクトの左にあるメニューバーから、[Connect to Unity Cloud] を選択します。
+1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
 2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
-3. Unity Cloudでプロジェクト名・プロジェクト名・プロジェクトIDを確認します。
-4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・プロジェクト名・プロジェクトIDと一致していることを確認します。
+3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
+4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・組織名・プロジェクトIDと一致していることを確認します。
+    
+    > [!IMPORTANT]
+    > UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。 
 
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
-    * プロジェクト名・プロジェクト名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] 設定し、[Link Unity project to cloud project] を選択する
+    * プロジェクト名・組織名・プロジェクトIDが表示されない場合は、下記の画面で [Organization] と [Cloud project] 設定し、[Link Unity project to cloud project] を選択する
 
         <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
 
 ## :hammer_and_wrench: ビルド＆実行する
+> [!IMPORTANT]
+> Meta Quest3でプロジェクトを実行するには、Meta Quest3を開発者モードに変更してください。
+> 詳しくは、[開発とテスト用にデバイスを有効にする - Oculus Developer](https://developer.oculus.com/documentation/unity/unity-enable-device/) をご覧ください。
+
+> [!WARNING]
+> 過去に同じヘッドセットでこのプロジェクトを実行したことがある場合、ヘッドセットにこのプロジェクトのアプリ（ARCommunicator）が残っていると、ビルドに失敗する場合があります。
+> アプリの削除は、ヘッドセットで [アプリ] > [提供元不明] を選択し、 ARCommunicator の右にあるメニューバーから [削除] を選択してください。
+
 1. [Edit] > [Project Settings] > [Meta XR] > [Android] を選択します。
 2. チェックリストに Outstanding Issues と Recommended Items がある場合、[Fix All] と [Apply All] を選択します。
 
@@ -118,6 +134,6 @@
 5. [File] > [Build Settings] > [Android] を選択し、 [Switch Platform] をクリックします。
 6. USB-Cケーブルを使用してMeta Quest3をコンピューターに接続します。
 7. Meta Quest3で、[Allow USB Debugging (USBデバッグを許可)]をクリックします。
-8. Scenes In BuildとAndroidビルド設定を以下のように変更します。
+8. Unityプロジェクトで、Scenes In BuildとAndroidビルド設定を以下のように変更します。
 
 9. [Build And Run] をクリックします。
