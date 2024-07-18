@@ -18,7 +18,7 @@
 6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
 7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
 8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-9. [:cloud: Unity Cloudと連携する](#cloud-unity-cloudと連携する)
+9. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
 10. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
 
 
@@ -97,7 +97,7 @@
 ## :package: 依存パッケージをインポートする
 * [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
 
-## :cloud: Unity Cloudと連携する
+## :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
 2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
 3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
