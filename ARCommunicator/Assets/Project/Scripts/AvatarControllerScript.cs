@@ -17,13 +17,20 @@ public class AvatarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
-        GetIsDHHScript getIsDHHScript = GameObject.Find("Firebase").GetComponent<GetIsDHHScript>();
+
+        await SetIsDHH();
+        BehaviorAvatar();
+    }
+
+    private async Task SetIsDHH()
+    {
+        GetIsDHHScript GetIsDHHScript = GameObject.Find("Firebase").GetComponent<GetIsDHHScript>();
 
         // 使用者のisDHHを取得
         try
         {
-            myIsDHH = await getIsDHHScript.GetIsDHHAsync(myUserId);
-            Debug.Log(myIsDHH);
+            myIsDHH = await GetIsDHHScript.GetIsDHHAsync(myUserId);
+            Debug.Log($"my isDHH: {myIsDHH}");
         }
         catch (System.ArgumentNullException error)
         {
@@ -33,19 +40,19 @@ public class AvatarControllerScript : MonoBehaviour
         // 相手のisDHHを取得
         try
         {
-            partnerIsDHH = await getIsDHHScript.GetIsDHHAsync(partnerUserId);
-            Debug.Log(partnerIsDHH);
+            partnerIsDHH = await GetIsDHHScript.GetIsDHHAsync(partnerUserId);
+            Debug.Log($"partner's isDHH: {partnerIsDHH}");
         }
-        catch(System.ArgumentNullException error)
+        catch (System.ArgumentNullException error)
         {
             Debug.LogError(error);
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void BehaviorAvatar()
     {
+        ListenMessageChangedScript ListenMessageChangedScript = GameObject.Find("Firebase").GetComponent<ListenMessageChangedScript>();
+
         if (myIsDHH == true)
         {
             if (partnerIsDHH == true)
@@ -54,17 +61,48 @@ public class AvatarControllerScript : MonoBehaviour
             }
             else
             {
-                // TODO: 相手のmessageの変更を取得
-                // TODO: 相手のアバター(partnerAvatar)に手話させる
+                ListenMessageChangedScript.AttachMessageListener(partnerUserId, SignLanguage);
             }
         }
         else
         {
             if (partnerIsDHH == true)
             {
-                // TODO: 相手のmessageの変更を取得
-                // TODO: 相手のアバター(partnerAvatar)に発話＆ジェスチャーさせる
+                ListenMessageChangedScript.AttachMessageListener(partnerUserId, Talk);
             }
         }
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+
+    // TODO: SignLanguageメソッドを別ファイルに切り出す
+    public void SignLanguage(string message)
+    {
+        Debug.Log($"SignLanguageメソッド(message: {message})");
+        // TODO: 相手のアバター(partnerAvatar)に手話させる
+    }
+
+
+    // TODO: Speech,Gesture,Talkメソッドを１つにまとめた別ファイルに切り出す
+    public void Speech(string message)
+    {
+        Debug.Log($"Speechメソッド(message: {message})");
+        // TODO: 相手のアバター(partnerAvatar)に発話させる
+    }
+    public void Gesture(string message)
+    {
+        Debug.Log($"Gestureメソッド(message: {message})");
+        // TODO: 相手のアバター(partnerAvatar)にジェスチャーさせる
+    }
+    public void Talk(string message)
+    {
+        Speech(message);
+        Gesture(message);
     }
 }

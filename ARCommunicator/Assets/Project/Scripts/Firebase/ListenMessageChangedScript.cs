@@ -18,7 +18,7 @@ public class ListenMessageChangedScript : MonoBehaviour
         databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
         // 各ユーザーのmessageフィールドの変更を監視します。
-        AttachValueChangedListeners();
+        //AttachValueChangedListeners();
 
     }
 
@@ -28,15 +28,17 @@ public class ListenMessageChangedScript : MonoBehaviour
         
     }
 
-    void AttachValueChangedListeners()
-    {
-        // 各ユーザーのmessageフィールドの変更を監視します。
-        //AttachMessageListener("user1");
-        //AttachMessageListener("user2");
-        //AttachMessageListener("user3");
-    }
+    //void AttachValueChangedListeners()
+    //{
+    //    // 各ユーザーのmessageフィールドの変更を監視します。
+    //    //AttachMessageListener("user1");
+    //    //AttachMessageListener("user2");
+    //    //AttachMessageListener("user3");
+    //}
 
-    void AttachMessageListener(string userId)
+    public delegate void UseMessage(string message);
+
+    public void AttachMessageListener(string userId, System.Action<string> UseMessage)
     {
         DatabaseReference messageReference = databaseReference.Child(userId).Child("message");
         messageReference.ValueChanged += (object sender, ValueChangedEventArgs args) => {
@@ -49,7 +51,11 @@ public class ListenMessageChangedScript : MonoBehaviour
             if (args.Snapshot != null && args.Snapshot.Exists)
             {
                 // 取得したデータの処理
-                Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
+                //Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
+                if (!string.IsNullOrWhiteSpace((string)args.Snapshot.Value))
+                {
+                    UseMessage((string)args.Snapshot.Value);
+                }
             }
             else
             {
