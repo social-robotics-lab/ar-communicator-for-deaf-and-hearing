@@ -7,39 +7,18 @@ using Firebase.Database;
 
 
 
-public class DataBaseScript : MonoBehaviour
+public class ListenMessageChangedScript : MonoBehaviour
 {
-    private Firebase.FirebaseApp app;
-    
     private DatabaseReference databaseReference;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
-            var dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available)
-            {
-                // FirebaseApp‚ÌƒfƒtƒHƒ‹ƒgƒCƒ“ƒXƒ^ƒ“ƒX‚ğæ“¾‚µ‚Ü‚·B
-                app = Firebase.FirebaseApp.DefaultInstance;
+        // ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ«ãƒ¼ãƒˆå‚ç…§ã‚’å–å¾—
+        databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
-                // Firebase‚Ì€”õ‚ª®‚Á‚½‚±‚Æ‚ğ¦‚·ƒtƒ‰ƒO‚ğƒZƒbƒg‚µ‚Ü‚·B
-                Debug.Log("Firebase is ready to use.");
-
-                // ƒf[ƒ^ƒx[ƒX‚Ìƒ‹[ƒgQÆ‚ğæ“¾
-                databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
-
-                // Šeƒ†[ƒU[‚ÌmessageƒtƒB[ƒ‹ƒh‚Ì•ÏX‚ğŠÄ‹‚µ‚Ü‚·B
-                AttachValueChangedListeners();
-            }
-            else
-            {
-                UnityEngine.Debug.LogError(System.String.Format(
-                  "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
-                // Firebase Unity SDK is not safe to use here.
-            }
-        });
+        // å„ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®messageãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®å¤‰æ›´ã‚’ç›£è¦–ã—ã¾ã™ã€‚
+        AttachValueChangedListeners();
 
     }
 
@@ -51,7 +30,7 @@ public class DataBaseScript : MonoBehaviour
 
     void AttachValueChangedListeners()
     {
-        // Šeƒ†[ƒU[‚ÌmessageƒtƒB[ƒ‹ƒh‚Ì•ÏX‚ğŠÄ‹‚µ‚Ü‚·B
+        // å„ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®messageãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®å¤‰æ›´ã‚’ç›£è¦–ã—ã¾ã™ã€‚
         AttachMessageListener("user1");
         AttachMessageListener("user2");
         AttachMessageListener("user3");
@@ -69,7 +48,7 @@ public class DataBaseScript : MonoBehaviour
 
             if (args.Snapshot != null && args.Snapshot.Exists)
             {
-                // æ“¾‚µ‚½ƒf[ƒ^‚Ìˆ—
+                // å–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿ã®å‡¦ç†
                 Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
             }
             else
@@ -78,8 +57,6 @@ public class DataBaseScript : MonoBehaviour
             }
         };
     }
-
-    
     
 
     void OnDestroy()
@@ -87,7 +64,7 @@ public class DataBaseScript : MonoBehaviour
         
         if (databaseReference != null)
         {
-            // Šeƒ†[ƒU[‚ÌmessageƒtƒB[ƒ‹ƒh‚Ì•ÏXŠÄ‹‚ğ‰ğœ‚µ‚Ü‚·B
+            // å„ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®messageãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®å¤‰æ›´ç›£è¦–ã‚’è§£é™¤ã—ã¾ã™ã€‚
             DetachMessageListener("user1");
             DetachMessageListener("user2");
             DetachMessageListener("user3");
