@@ -522,8 +522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user2
-  partnerUserId: user1
+  myUserId: user1
+  partnerUserId: user2
   partnerAvatar: {fileID: 1872415744}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
