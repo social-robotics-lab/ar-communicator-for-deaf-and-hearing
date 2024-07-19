@@ -18,11 +18,11 @@ public class AvatarControllerScript : MonoBehaviour
     async void Start()
     {
 
-        await SetIsDHH();
+        await SetIsDHHAsync();
         BehaviorAvatar();
     }
 
-    private async Task SetIsDHH()
+    private async Task SetIsDHHAsync()
     {
         GetIsDHHScript GetIsDHHScript = GameObject.Find("Firebase").GetComponent<GetIsDHHScript>();
 
