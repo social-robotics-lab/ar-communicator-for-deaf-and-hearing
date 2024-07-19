@@ -44,7 +44,7 @@ public class AvatarControllerScript : MonoBehaviour
         try
         {
             partnerIsDHH = await GetIsDHH.GetIsDHHAsync(partnerUserId);
-            Debug.Log($"partner's isDHH: {partnerIsDHH}");
+            Debug.Log($"this avatar is {Avatar.name}\npartner's isDHH: {partnerIsDHH}");
         }
         catch (System.ArgumentNullException error)
         {

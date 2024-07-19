@@ -13,13 +13,13 @@ public class SpokenLanguageScript : MonoBehaviour
 
     private void Speech(string message)
     {
-        Debug.Log($"Speechメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)に発話させる
+        Debug.Log($"this avatar is {Avatar.name}\nSpeechメソッド(message: {message})");
+        // TODO: 相手のアバター(Avatar)に発話させる
     }
     private void Gesture(string message)
     {
-        Debug.Log($"Gestureメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)にジェスチャーさせる
+        Debug.Log($"this avatar is {Avatar.name}\nGestureメソッド(message: {message})");
+        // TODO: 相手のアバター(Avatar)にジェスチャーさせる
     }
     public void SpokenLanguage(string message)
     {

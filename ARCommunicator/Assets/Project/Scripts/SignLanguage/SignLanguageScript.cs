@@ -13,8 +13,8 @@ public class SignLanguageScript : MonoBehaviour
 
     public void SignLanguage(string message)
     {
-        Debug.Log($"SignLanguageメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)に手話させる
+        Debug.Log($"this avatar is {Avatar.name}\nSignLanguageメソッド(message: {message})");
+        // TODO: 相手のアバター(Avatar)に手話させる
     }
 
 }
