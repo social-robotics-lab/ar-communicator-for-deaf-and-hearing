@@ -17,8 +17,9 @@ public class AvatarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
-
+        // 使用者と相手のisDHHを取得
         await SetIsDHHAsync();
+        // messageから相手のアバターの振る舞いを決定
         BehaviorAvatar();
     }
 
@@ -53,6 +54,9 @@ public class AvatarControllerScript : MonoBehaviour
     {
         ListenMessageChangedScript ListenMessageChangedScript = GameObject.Find("Firebase").GetComponent<ListenMessageChangedScript>();
 
+        SignLanguageScript SignLanguage = new SignLanguageScript();
+        SpokenLanguageScript SpokenLanguage = new SpokenLanguageScript();
+
         if (myIsDHH == true)
         {
             if (partnerIsDHH == true)
@@ -61,14 +65,14 @@ public class AvatarControllerScript : MonoBehaviour
             }
             else
             {
-                ListenMessageChangedScript.AttachMessageListener(partnerUserId, SignLanguage);
+                ListenMessageChangedScript.AttachMessageListener(partnerUserId,SignLanguage.SignLanguage);
             }
         }
         else
         {
             if (partnerIsDHH == true)
             {
-                ListenMessageChangedScript.AttachMessageListener(partnerUserId, Talk);
+                ListenMessageChangedScript.AttachMessageListener(partnerUserId, SpokenLanguage.SpokenLanguage);
             }
         }
     }
@@ -78,31 +82,5 @@ public class AvatarControllerScript : MonoBehaviour
     void Update()
     {
 
-    }
-
-
-    // TODO: SignLanguageメソッドを別ファイルに切り出す
-    public void SignLanguage(string message)
-    {
-        Debug.Log($"SignLanguageメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)に手話させる
-    }
-
-
-    // TODO: Speech,Gesture,Talkメソッドを１つにまとめた別ファイルに切り出す
-    public void Speech(string message)
-    {
-        Debug.Log($"Speechメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)に発話させる
-    }
-    public void Gesture(string message)
-    {
-        Debug.Log($"Gestureメソッド(message: {message})");
-        // TODO: 相手のアバター(partnerAvatar)にジェスチャーさせる
-    }
-    public void Talk(string message)
-    {
-        Speech(message);
-        Gesture(message);
     }
 }
