@@ -16,10 +16,6 @@ public class ListenMessageChangedScript : MonoBehaviour
     {
         // データベースのルート参照を取得
         databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
-
-        // 各ユーザーのmessageフィールドの変更を監視します。
-        //AttachValueChangedListeners();
-
     }
 
     // Update is called once per frame
@@ -27,14 +23,6 @@ public class ListenMessageChangedScript : MonoBehaviour
     {
         
     }
-
-    //void AttachValueChangedListeners()
-    //{
-    //    // 各ユーザーのmessageフィールドの変更を監視します。
-    //    //AttachMessageListener("user1");
-    //    //AttachMessageListener("user2");
-    //    //AttachMessageListener("user3");
-    //}
 
     public delegate void UseMessage(string message);
 
@@ -51,7 +39,6 @@ public class ListenMessageChangedScript : MonoBehaviour
             if (args.Snapshot != null && args.Snapshot.Exists)
             {
                 // 取得したデータの処理
-                //Debug.Log($"{userId} message changed: {args.Snapshot.Value}");
                 if (!string.IsNullOrWhiteSpace((string)args.Snapshot.Value))
                 {
                     UseMessage((string)args.Snapshot.Value);

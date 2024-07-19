@@ -25,12 +25,12 @@ public class AvatarControllerScript : MonoBehaviour
 
     private async Task SetIsDHHAsync()
     {
-        GetIsDHHScript GetIsDHHScript = GameObject.Find("Firebase").GetComponent<GetIsDHHScript>();
+        GetIsDHHScript GetIsDHH = new GetIsDHHScript();
 
         // 使用者のisDHHを取得
         try
         {
-            myIsDHH = await GetIsDHHScript.GetIsDHHAsync(myUserId);
+            myIsDHH = await GetIsDHH.GetIsDHHAsync(myUserId);
             Debug.Log($"my isDHH: {myIsDHH}");
         }
         catch (System.ArgumentNullException error)
@@ -41,7 +41,7 @@ public class AvatarControllerScript : MonoBehaviour
         // 相手のisDHHを取得
         try
         {
-            partnerIsDHH = await GetIsDHHScript.GetIsDHHAsync(partnerUserId);
+            partnerIsDHH = await GetIsDHH.GetIsDHHAsync(partnerUserId);
             Debug.Log($"partner's isDHH: {partnerIsDHH}");
         }
         catch (System.ArgumentNullException error)

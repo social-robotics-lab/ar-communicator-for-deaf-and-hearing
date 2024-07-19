@@ -7,20 +7,9 @@ using static Firebase.Extensions.TaskExtension;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class GetIsDHHScript : MonoBehaviour
+public class GetIsDHHScript
 {
     private DatabaseReference reference;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public async Task<bool> GetIsDHHAsync(string userId)
     {
