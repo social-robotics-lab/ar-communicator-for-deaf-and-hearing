@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUserId: user1
-  partnerUserId: user3
+  partnerUserId: user2
 --- !u!114 &977259324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUserId: user1
-  partnerUserId: user2
+  partnerUserId: user3
 --- !u!114 &1764150079
 MonoBehaviour:
   m_ObjectHideFlags: 0
