@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpokenLanguageScript
+public class SpokenLanguageScript : MonoBehaviour
 {
+    private GameObject Avatar;
+
+    private void Start()
+    {
+        Avatar = this.gameObject;
+    }
 
     private void Speech(string message)
     {

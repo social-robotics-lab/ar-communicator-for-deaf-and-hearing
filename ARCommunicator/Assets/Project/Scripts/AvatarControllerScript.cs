@@ -8,7 +8,7 @@ public class AvatarControllerScript : MonoBehaviour
     public string myUserId;
     public string partnerUserId;
 
-    public GameObject partnerAvatar;
+    private GameObject Avatar;
 
 
     private bool myIsDHH;
@@ -17,6 +17,8 @@ public class AvatarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
+        Avatar=this.gameObject;
+        
         // 使用者と相手のisDHHを取得
         await SetIsDHHAsync();
         // messageから相手のアバターの振る舞いを決定
@@ -54,14 +56,14 @@ public class AvatarControllerScript : MonoBehaviour
     {
         ListenMessageChangedScript ListenMessageChangedScript = GameObject.Find("Firebase").GetComponent<ListenMessageChangedScript>();
 
-        SignLanguageScript SignLanguage = new SignLanguageScript();
-        SpokenLanguageScript SpokenLanguage = new SpokenLanguageScript();
+        SignLanguageScript SignLanguage = Avatar.GetComponent<SignLanguageScript>(); ;
+        SpokenLanguageScript SpokenLanguage = Avatar.GetComponent<SpokenLanguageScript>();
 
         if (myIsDHH == true)
         {
             if (partnerIsDHH == true)
             {
-                partnerAvatar.SetActive(false);
+                Avatar.SetActive(false);
             }
             else
             {
@@ -73,6 +75,10 @@ public class AvatarControllerScript : MonoBehaviour
             if (partnerIsDHH == true)
             {
                 ListenMessageChangedScript.AttachMessageListener(partnerUserId, SpokenLanguage.SpokenLanguage);
+            }
+            else
+            {
+                Avatar.SetActive(false);
             }
         }
     }
