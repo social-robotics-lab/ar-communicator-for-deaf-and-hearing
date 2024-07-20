@@ -19,8 +19,8 @@ public class SaveGenderScript : MonoBehaviour
         // Get the root reference location of the database.
         databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
-        femaleButton.onClick.AddListener(() => WriteIsDHH(userId, "f"));
-        maleButton.onClick.AddListener(() => WriteIsDHH(userId, "m"));
+        femaleButton.onClick.AddListener(() => WriteGender(userId, "f"));
+        maleButton.onClick.AddListener(() => WriteGender(userId, "m"));
     }
 
     // Update is called once per frame
@@ -29,9 +29,9 @@ public class SaveGenderScript : MonoBehaviour
 
     }
 
-    public void WriteIsDHH(string userId, string newGender)
+    public void WriteGender(string userId, string newGender)
     {
-        DatabaseReference isDHHReference = databaseReference.Child(userId).Child("gender");
-        isDHHReference.SetValueAsync(newGender);
+        DatabaseReference genderReference = databaseReference.Child(userId).Child("gender");
+        genderReference.SetValueAsync(newGender);
     }
 }
