@@ -296,10 +296,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21faff4450ac4401c8b6f4b4124ffb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar1: {fileID: 1872415744}
-  Avatar2: {fileID: 1019477762}
-  Avatar3: {fileID: 977259315}
-  Avatar4: {fileID: 1764150070}
+  myUserId: user1
+  numberOfUsers: 3
+  maleAvatars:
+  - {fileID: 1872415744}
+  - {fileID: 1019477762}
+  femaleAvatars:
+  - {fileID: 977259315}
+  - {fileID: 1764150070}
 --- !u!1 &630264036
 GameObject:
   m_ObjectHideFlags: 0

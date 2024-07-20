@@ -4,22 +4,47 @@ using UnityEngine;
 
 public class SelectAvatarScript : MonoBehaviour
 {
-    public GameObject Avatar1;
-    public GameObject Avatar2;
-    public GameObject Avatar3;
-    public GameObject Avatar4;
+    public string myUserId;
+
+    public int numberOfUsers;
+
+    public GameObject[] maleAvatars;
+    public GameObject[] femaleAvatars;
 
     // Start is called before the first frame update
     async void Start()
     {
-        Destroy(Avatar1);
-        Destroy(Avatar2);
+        VerifyAvatars(numberOfUsers, maleAvatars);
+        VerifyAvatars(numberOfUsers, femaleAvatars);
+        //Destroy(maleAvatars[0]);
+        //Destroy(maleAvatars[1]);
 
         GetGenderScript GetGender = new GetGenderScript();
 
         string gender;
         gender = await GetGender.GetGenderAsync("user1");
         Debug.Log(gender);
+    }
+
+    private void VerifyAvatars(int numberOfUsers, GameObject[] avatars)
+    {
+        HashSet<GameObject> avatarsHashSet = new HashSet<GameObject>();
+        foreach(GameObject avatar in avatars)
+        {
+            if (avatarsHashSet.Add(avatar) == false)
+            {
+                Debug.LogError($"{avatar.name} is already used. Attach a different avatar.");
+            }
+            if (avatar == null)
+            {
+                Debug.LogError("An avatar is null. Attach all avatars.");
+            }
+        }
+
+        if (avatars.Length < numberOfUsers - 1)
+        {
+            Debug.LogError($"There are not enough avatars. At least {numberOfUsers - 1} avatars are required.");
+        }
     }
 
     // Update is called once per frame
