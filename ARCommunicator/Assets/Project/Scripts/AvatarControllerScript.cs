@@ -6,8 +6,8 @@ using Cysharp.Threading.Tasks;
 
 public class AvatarControllerScript : MonoBehaviour
 {
-    public string myUserId;
-    public string avatarUserId=null;
+    private string myUserId;
+    [HideInInspector] public string avatarUserId=null;
 
     private GameObject avatar;
 
@@ -19,6 +19,7 @@ public class AvatarControllerScript : MonoBehaviour
     async void Start()
     {
         avatar=this.gameObject;
+        myUserId = avatar.GetComponentInParent<SelectAvatarScript>().myUserId;
 
         await UniTask.WaitUntil(() => avatar.GetComponentInParent<SelectAvatarScript>().isCompleted);
 

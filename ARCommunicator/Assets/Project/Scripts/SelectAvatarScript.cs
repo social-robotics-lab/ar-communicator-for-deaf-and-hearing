@@ -16,7 +16,7 @@ public class SelectAvatarScript : MonoBehaviour
 
     private string[] userIds;
 
-    public bool isCompleted=false;
+    [HideInInspector] public bool isCompleted=false;
 
     // Start is called before the first frame update
     async void Start()
