@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
+using System.Linq;
+using System;
 
 public class SelectAvatarScript : MonoBehaviour
 {
@@ -11,19 +14,21 @@ public class SelectAvatarScript : MonoBehaviour
     public GameObject[] maleAvatars;
     public GameObject[] femaleAvatars;
 
+    private string[] userIds;
+
+    public bool isCompleted=false;
+
     // Start is called before the first frame update
     async void Start()
     {
         VerifyAvatars(numberOfUsers, maleAvatars);
         VerifyAvatars(numberOfUsers, femaleAvatars);
-        //Destroy(maleAvatars[0]);
-        //Destroy(maleAvatars[1]);
 
-        GetGenderScript GetGender = new GetGenderScript();
+        userIds = GenerateUserIds(numberOfUsers);
 
-        string gender;
-        gender = await GetGender.GetGenderAsync("user1");
-        Debug.Log(gender);
+        await AssignUserIdToAvatarByGender(userIds, maleAvatars, femaleAvatars);
+        Debug.Log("userId assigned to avatar is completed");
+        isCompleted = true;
     }
 
     private void VerifyAvatars(int numberOfUsers, GameObject[] avatars)
@@ -44,6 +49,58 @@ public class SelectAvatarScript : MonoBehaviour
         if (avatars.Length < numberOfUsers - 1)
         {
             Debug.LogError($"There are not enough avatars. At least {numberOfUsers - 1} avatars are required.");
+        }
+    }
+
+    private string[] GenerateUserIds(int numberOfUsers)
+    {
+        string[] userIds = new string[numberOfUsers];
+
+        for(int i=0; i<numberOfUsers; i++)
+        {
+            userIds[i] = $"user{i+1}";
+        }
+
+        return userIds;
+    }
+
+    private async Task AssignUserIdToAvatarByGender(string[] userIds, GameObject[] maleAvatars, GameObject[] femaleAvatars)
+    {
+        GetGenderScript GetGender = new GetGenderScript();
+
+        GameObject[] randomMaleAvatars = maleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
+        GameObject[] randomFemaleAvatars = femaleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
+
+        int maleCount = 0;
+        int femaleCount = 0;
+        foreach (string userId in userIds)
+        {
+            if (userId != myUserId)
+            {
+                try
+                {
+                    string gender = null;
+                    gender = await GetGender.GetGenderAsync(userId);
+                    if (gender != null)
+                    {
+                        if (gender == "m")
+                        {
+                            randomMaleAvatars[maleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
+                            maleCount++;
+                        }
+                        else
+                        {
+                            randomFemaleAvatars[femaleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
+                            femaleCount++;
+                        }
+                    }
+                }
+                catch (System.ArgumentNullException error)
+                {
+                    Debug.LogError(error);
+                }
+
+            }
         }
     }
 

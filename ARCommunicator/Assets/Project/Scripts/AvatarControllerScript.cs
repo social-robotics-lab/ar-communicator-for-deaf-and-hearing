@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 
 public class AvatarControllerScript : MonoBehaviour
 {
     public string myUserId;
-    public string partnerUserId;
+    public string avatarUserId=null;
 
-    private GameObject Avatar;
+    private GameObject avatar;
 
 
     private bool myIsDHH;
@@ -17,12 +18,24 @@ public class AvatarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
-        Avatar=this.gameObject;
-        
-        // 使用者と相手のisDHHを取得
-        await SetIsDHHAsync();
-        // messageから相手のアバターの振る舞いを決定
-        BehaviorAvatar();
+        avatar=this.gameObject;
+
+        await UniTask.WaitUntil(() => avatar.GetComponentInParent<SelectAvatarScript>().isCompleted);
+
+        if (string.IsNullOrWhiteSpace(avatarUserId))
+        {
+            Destroy(avatar);
+        }
+        else
+        {
+            Debug.Log($"{avatar.name} is {avatarUserId}");
+
+            // 使用者と相手のisDHHを取得
+            await SetIsDHHAsync();
+            // messageから相手のアバターの振る舞いを決定
+            BehaviorAvatar();
+        }
+
     }
 
     private async Task SetIsDHHAsync()
@@ -43,8 +56,8 @@ public class AvatarControllerScript : MonoBehaviour
         // 相手のisDHHを取得
         try
         {
-            partnerIsDHH = await GetIsDHH.GetIsDHHAsync(partnerUserId);
-            Debug.Log($"this avatar is {Avatar.name}\npartner's isDHH: {partnerIsDHH}");
+            partnerIsDHH = await GetIsDHH.GetIsDHHAsync(avatarUserId);
+            Debug.Log($"this avatar is {avatar.name}\npartner's isDHH: {partnerIsDHH}");
         }
         catch (System.ArgumentNullException error)
         {
@@ -56,29 +69,29 @@ public class AvatarControllerScript : MonoBehaviour
     {
         ListenMessageChangedScript ListenMessageChangedScript = GameObject.Find("Firebase").GetComponent<ListenMessageChangedScript>();
 
-        SignLanguageScript SignLanguage = Avatar.GetComponent<SignLanguageScript>(); ;
-        SpokenLanguageScript SpokenLanguage = Avatar.GetComponent<SpokenLanguageScript>();
+        SignLanguageScript SignLanguage = avatar.GetComponent<SignLanguageScript>(); ;
+        SpokenLanguageScript SpokenLanguage = avatar.GetComponent<SpokenLanguageScript>();
 
         if (myIsDHH == true)
         {
             if (partnerIsDHH == true)
             {
-                Avatar.SetActive(false);
+                avatar.SetActive(false);
             }
             else
             {
-                ListenMessageChangedScript.AttachMessageListener(partnerUserId,SignLanguage.SignLanguage);
+                ListenMessageChangedScript.AttachMessageListener(avatarUserId,SignLanguage.SignLanguage);
             }
         }
         else
         {
             if (partnerIsDHH == true)
             {
-                ListenMessageChangedScript.AttachMessageListener(partnerUserId, SpokenLanguage.SpokenLanguage);
+                ListenMessageChangedScript.AttachMessageListener(avatarUserId, SpokenLanguage.SpokenLanguage);
             }
             else
             {
-                Avatar.SetActive(false);
+                avatar.SetActive(false);
             }
         }
     }

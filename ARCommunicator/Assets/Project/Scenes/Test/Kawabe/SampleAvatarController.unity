@@ -131,8 +131,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 218798932}
+  - component: {fileID: 218798933}
   m_Layer: 0
-  m_Name: Avatar
+  m_Name: Avatars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,13 +152,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 608514561}
   - {fileID: 1872415753}
   - {fileID: 1019477761}
   - {fileID: 977259314}
   - {fileID: 1764150069}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218798933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218798931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21faff4450ac4401c8b6f4b4124ffb07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myUserId: user1
+  numberOfUsers: 3
+  maleAvatars:
+  - {fileID: 1872415744}
+  - {fileID: 1019477762}
+  femaleAvatars:
+  - {fileID: 977259315}
+  - {fileID: 1764150070}
 --- !u!1 &425654889
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,58 +272,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &608514560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 608514561}
-  - component: {fileID: 608514562}
-  m_Layer: 0
-  m_Name: Select
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &608514561
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608514560}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 218798932}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &608514562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608514560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21faff4450ac4401c8b6f4b4124ffb07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myUserId: user1
-  numberOfUsers: 3
-  maleAvatars:
-  - {fileID: 1872415744}
-  - {fileID: 1019477762}
-  femaleAvatars:
-  - {fileID: 977259315}
-  - {fileID: 1764150070}
 --- !u!1 &630264036
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUserId: user1
-  partnerUserId: user2
+  avatarUserId: 
 --- !u!114 &977259324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,8 +783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user2
-  partnerUserId: user3
+  myUserId: user1
+  avatarUserId: 
 --- !u!114 &1019477771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUserId: user1
-  partnerUserId: user3
+  avatarUserId: 
 --- !u!114 &1764150079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,8 +1166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user2
-  partnerUserId: user3
+  myUserId: user1
+  avatarUserId: 
 --- !u!4 &1872415753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3710449979822318959, guid: db9cd522d52284b4dbc6bc8bb5f3e002, type: 3}
