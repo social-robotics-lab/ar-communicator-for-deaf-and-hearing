@@ -17,9 +17,10 @@
 5. [:robot: AndroidアプリをFirebaseに登録する](#robot-androidアプリをfirebaseに登録する)
 6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
 7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
-8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-9. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
-10. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
+8. [:vertical_traffic_light: スクリプトの実行順序を指定する](#vertical_traffic_light-スクリプトの実行順序を指定する)
+9. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
+10. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
+11. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
 
 
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
@@ -67,6 +68,9 @@
 
     <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
 
+> [!Note]\
+> データベースの値は、システムを操作することで変更されるため、セットアップ時は仮の値で保存してください。
+
 ## :robot: AndroidアプリをFirebaseに登録する
 [アプリをFirebaseに登録する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#register-app) を参考にして、AndroidアプリをFirebaseに登録します。
 
@@ -94,8 +98,17 @@
 
 4. Import Unity Packageウィンドウで [Import] をクリックします。
 
+## :vertical_traffic_light: スクリプトの実行順序を指定する
+1. [Edit] > [Project Settings] > [Script Execution Order] に移動する。
+2. [Initialize Firebase Script] を追加し、 Default Time の上に配置し、[Apply] を選択する。
+
+    <img width="600" src="Documents/Images/ScriptExecutionOrder.png">
+
 ## :package: 依存パッケージをインポートする
-* [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x Import/Export** via UnityPackage からパッケージをダウンロードして、Unityプロジェクトにインポートします。
+以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
+
+* [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x**  UnityPackage
+* [UniTask (v.2.5.5)](https://github.com/Cysharp/UniTask/releases/tag/2.5.5) UnityPackage
 
 ## :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
