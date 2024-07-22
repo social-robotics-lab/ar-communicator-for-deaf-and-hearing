@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 public class GetIsDHHScript
 {
-    private DatabaseReference reference;
+    //private DatabaseReference reference;
 
     public async Task<bool> GetIsDHHAsync(string userId)
     {
         bool? result=null;
 
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 
         await reference.Child(userId).Child("isDHH")
           .GetValueAsync().ContinueWithOnMainThread(task => {
@@ -29,7 +29,7 @@ public class GetIsDHHScript
               {
                 DataSnapshot snapshot = task.Result;
                   // Do something with snapshot...
-                  // Debug.Log($"{userId} is DHH: {snapshot.Value}");
+                  //Debug.Log($"{userId} is DHH: {snapshot.Value}");
                   result = (bool)snapshot.Value;
                 }
           });
