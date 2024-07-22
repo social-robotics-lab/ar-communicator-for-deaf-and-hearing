@@ -48,7 +48,8 @@
 3. ARCommunicatorフォルダを選択して、作成されたプロジェクトを開きます。
 
 ## :fire: Firebaseプロジェクトを作成する
-[Firebaseプロジェクトを作成する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#create-firebase-project) を参考にして、Firebaseプロジェクトを作成します。
+> [!Note]\
+> 詳しくは [Unity プロジェクトに Firebase を追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja) をご覧ください。
 
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で [プロジェクトを追加] をクリックします。
 2. 任意のプロジェクト名を入力して、[続行] をクリックします。
@@ -56,7 +57,9 @@
 4. 処理が完了すると、[Firebaseコンソール](https://console.firebase.google.com/?hl=ja) にFirebaseプロジェクトの概要ページが表示されます。
 
 ## :fire: Firebase Realtime Databaseを作成する
-[データベースを作成する - Firebaseドキュメント](https://firebase.google.com/docs/database/unity/start?hl=ja#create_a_database) を参考にして、Firebase Realtime Databaseを作成します。
+> [!Note]\
+> データベースは、システムを操作することで変更されるため、セットアップ時は仮の値で保存してください。\
+> Firebase Realtime Databaseについては [Firebase Realtime Database - Firebaseドキュメント](https://firebase.google.com/docs/database?hl=ja) などをご覧ください。
 
 1. プロジェクトの概要ページの [構築] から [Realtime Database] を選択します。
 2. セキュリティルールで [テストモード] を選択します。
@@ -68,27 +71,18 @@
 
     <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
 
-> [!Note]\
-> データベースの値は、システムを操作することで変更されるため、セットアップ時は仮の値で保存してください。
-
 ## :robot: AndroidアプリをFirebaseに登録する
-[アプリをFirebaseに登録する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#register-app) を参考にして、AndroidアプリをFirebaseに登録します。
-
 1. プロジェクトの概要ページの中央で、[Unityアイコン] をクリックして設定ワークフローを起動します。
 2. [Androidアプリとして登録] にチェックを入れます。
 3. Androidパッケージ名に `com.DefaultCompany.ARCommunicator` と入力します。
 4. アプリのニックネームに任意のアプリ名を入力して、[アプリを登録] をクリックします。
 
 ## :wrench: Firebase構成ファイルを追加する
-[Firebase構成ファイルを追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#add-config-file) を参考にして、Firebase構成ファイルを追加します。
-
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`google-services.json` をダウンロードします。
 2. Unityプロジェクトで、`Assets`フォルダの中に`StreamingAssets`フォルダを作成します。
 3. `StreamingAssets`フォルダの中に `google-services.json`を移動します。
 
 ## :toolbox: Firebase Unity SDKを追加する
-[Firebase Unity SDK を追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja#add-sdks) を参考にして、Firebase Unity SDKを追加します。
-
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`Firebase Unity SDK` をダウンロードし、SDKを解凍します。
 2. Unityプロジェクトで、[Assets] > [Import Package] > [Custom Package] を選択します。
 3. 解凍したSDKから、以下のFirebaseプロダクトを選択します。
@@ -118,12 +112,12 @@
 
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
+> [!WARNING]\
+> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
+
 > [!NOTE]\
 > プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
 > <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
-
-> [!WARNING]\
-> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
 
 ## :hammer_and_wrench: ビルド＆実行する
 > [!IMPORTANT]\
