@@ -178,6 +178,7 @@ MonoBehaviour:
   femaleAvatars:
   - {fileID: 977259315}
   - {fileID: 1764150070}
+  isCompleted: 0
 --- !u!1 &425654889
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user1
   avatarUserId: 
 --- !u!114 &977259324
 MonoBehaviour:
@@ -783,7 +783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user1
   avatarUserId: 
 --- !u!114 &1019477771
 MonoBehaviour:
@@ -977,7 +976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user1
   avatarUserId: 
 --- !u!114 &1764150079
 MonoBehaviour:
@@ -1166,7 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f41e9fad4e814f2a983fdfe258edb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUserId: user1
   avatarUserId: 
 --- !u!4 &1872415753 stripped
 Transform:

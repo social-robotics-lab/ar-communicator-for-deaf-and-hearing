@@ -19,9 +19,9 @@ public class AvatarControllerScript : MonoBehaviour
     async void Start()
     {
         avatar=this.gameObject;
-        myUserId = avatar.GetComponentInParent<SelectAvatarScript>().myUserId;
+        myUserId = avatar.GetComponentInParent<AllAvatarsManagerScript>().myUserId;
 
-        await UniTask.WaitUntil(() => avatar.GetComponentInParent<SelectAvatarScript>().isCompleted);
+        await UniTask.WaitUntil(() => avatar.GetComponentInParent<AllAvatarsManagerScript>().isCompleted);
 
         if (string.IsNullOrWhiteSpace(avatarUserId))
         {

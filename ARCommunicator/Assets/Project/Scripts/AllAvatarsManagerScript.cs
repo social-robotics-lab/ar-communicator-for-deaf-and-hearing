@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System;
 
-public class SelectAvatarScript : MonoBehaviour
+public class AllAvatarsManagerScript : MonoBehaviour
 {
     public string myUserId;
 
