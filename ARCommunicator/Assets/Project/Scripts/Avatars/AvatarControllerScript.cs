@@ -7,7 +7,7 @@ using Cysharp.Threading.Tasks;
 public class AvatarControllerScript : MonoBehaviour
 {
     private string myUserId;
-    [HideInInspector] public string avatarUserId=null;
+    [HideInInspector] public string avatarUserId = null;
 
     private GameObject avatar;
 
@@ -18,7 +18,7 @@ public class AvatarControllerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
-        avatar=this.gameObject;
+        avatar = this.gameObject;
         myUserId = avatar.GetComponentInParent<AllAvatarsManagerScript>().myUserId;
 
         await UniTask.WaitUntil(() => avatar.GetComponentInParent<AllAvatarsManagerScript>().isCompleted);
@@ -81,7 +81,7 @@ public class AvatarControllerScript : MonoBehaviour
             }
             else
             {
-                ListenMessageChangedScript.AttachMessageListener(avatarUserId,SignLanguage.SignLanguage);
+                ListenMessageChangedScript.AttachMessageListener(avatarUserId, SignLanguage.SignLanguage);
             }
         }
         else
