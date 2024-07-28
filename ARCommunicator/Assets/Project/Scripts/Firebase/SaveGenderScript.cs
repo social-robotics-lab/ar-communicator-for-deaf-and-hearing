@@ -8,19 +8,15 @@ using UnityEngine.UI;
 
 public class SaveGenderScript : MonoBehaviour
 {
-    public Button femaleButton;
-    public Button maleButton;
+    //public Button femaleButton;
+    //public Button maleButton;
 
     public string userId;
-    private DatabaseReference databaseReference;
+
     // Start is called before the first frame update
     void Start()
     {
-        // Get the root reference location of the database.
-        databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
-        femaleButton.onClick.AddListener(() => WriteGender(userId, "f"));
-        maleButton.onClick.AddListener(() => WriteGender(userId, "m"));
     }
 
     // Update is called once per frame
@@ -31,6 +27,8 @@ public class SaveGenderScript : MonoBehaviour
 
     public void WriteGender(string userId, string newGender)
     {
+        DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
+
         DatabaseReference genderReference = databaseReference.Child(userId).Child("gender");
         genderReference.SetValueAsync(newGender);
     }

@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 143275417}
   - component: {fileID: 143275416}
   m_Layer: 0
-  m_Name: Button
+  m_Name: MaleButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 143275417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046586595}
+        m_TargetAssemblyTypeName: OnButtonSelected, Assembly-CSharp
+        m_MethodName: OnMaleButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &143275417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,7 +890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Male
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2906,8 +2918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d025c418b179419cbd372ba18cac822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  femaleButton: {fileID: 0}
-  maleButton: {fileID: 0}
   userId: user1
 --- !u!4 &2016704597 stripped
 Transform:
@@ -2935,6 +2945,8 @@ GameObject:
   - component: {fileID: 2046586591}
   - component: {fileID: 2046586590}
   - component: {fileID: 2046586593}
+  - component: {fileID: 2046586594}
+  - component: {fileID: 2046586595}
   m_Layer: 0
   m_Name: InteractableCanvas
   m_TagString: Untagged
@@ -3388,6 +3400,68 @@ MonoBehaviour:
   _selectSurface: {fileID: 0}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!114 &2046586594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046586580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 2046586593}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2046586595}
+        m_TargetAssemblyTypeName: OnButtonSelected, Assembly-CSharp
+        m_MethodName: OnMaleButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2046586595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046586580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e319d696d60504006aaec3f556cec04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Firebase: {fileID: 2015398372}
 --- !u!1001 &2050162478
 PrefabInstance:
   m_ObjectHideFlags: 0
