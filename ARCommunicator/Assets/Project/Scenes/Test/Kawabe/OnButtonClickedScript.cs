@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class OnButtonClickedScript : MonoBehaviour
 {
-    public SaveIsDHHScript SaveIsDHHScript;
+    public SaveIsDHHScript saveIsDHHScript;
 
-    public SaveGenderScript SaveGenderScript;
+    public SaveGenderScript saveGenderScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +21,21 @@ public class OnButtonClickedScript : MonoBehaviour
 
     public void OnMaleButtonClicked()
     {
-        SaveGenderScript.WriteGender(SaveGenderScript.userId, "m");
+        saveGenderScript.WriteGender(saveGenderScript.userId, "m");
     }
 
     public void OnFemaleButtonClicked()
     {
-        SaveGenderScript.WriteGender(SaveGenderScript.userId, "f");
+        saveGenderScript.WriteGender(saveGenderScript.userId, "f");
     }
 
     public void OnDeafButtonClicked()
     {
-        SaveIsDHHScript.WriteIsDHH(SaveIsDHHScript.userId, true);
+        saveIsDHHScript.WriteIsDHH(saveIsDHHScript.userId, true);
     }
 
     public void OnHearingButtonClicked()
     {
-        SaveIsDHHScript.WriteIsDHH(SaveIsDHHScript.userId, false);
+        saveIsDHHScript.WriteIsDHH(saveIsDHHScript.userId, false);
     }
 }

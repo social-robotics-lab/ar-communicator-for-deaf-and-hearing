@@ -3416,8 +3416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e319d696d60504006aaec3f556cec04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveIsDHHScript: {fileID: 2015398379}
-  SaveGenderScript: {fileID: 2015398378}
+  saveIsDHHScript: {fileID: 2015398379}
+  saveGenderScript: {fileID: 2015398378}
 --- !u!114 &2046586596
 MonoBehaviour:
   m_ObjectHideFlags: 0
