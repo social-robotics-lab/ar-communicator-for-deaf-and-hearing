@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 
 public class GetGenderScript
 {
-    private DatabaseReference reference;
-
     public async Task<string> GetGenderAsync(string userId)
     {
         string result = null;
 
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 
         await reference.Child(userId).Child("gender")
           .GetValueAsync().ContinueWithOnMainThread(task => {

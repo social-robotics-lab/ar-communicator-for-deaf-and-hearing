@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using System.Linq;
 using System;
 
@@ -16,6 +17,8 @@ public class AllAvatarsManagerScript : MonoBehaviour
 
     private string[] userIds;
 
+    public InitializeFirebaseScript initializeFirebaseScript;
+
     [HideInInspector] public bool isCompleted=false;
 
     // Start is called before the first frame update
@@ -25,6 +28,8 @@ public class AllAvatarsManagerScript : MonoBehaviour
         VerifyAvatars(numberOfUsers, femaleAvatars);
 
         userIds = GenerateUserIds(numberOfUsers);
+
+        await UniTask.WaitUntil(() => initializeFirebaseScript.isCompleted);
 
         await AssignUserIdToAvatarByGender(userIds, maleAvatars, femaleAvatars);
         Debug.Log("userId assigned to avatar is completed");

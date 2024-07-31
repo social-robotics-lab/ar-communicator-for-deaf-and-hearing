@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 
 public class GetIsDHHScript
 {
-    //private DatabaseReference reference;
-
     public async Task<bool> GetIsDHHAsync(string userId)
     {
         bool? result=null;

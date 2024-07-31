@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase.Extensions;
+using System.Threading.Tasks;
 
 public class InitializeFirebaseScript : MonoBehaviour
 {
     private Firebase.FirebaseApp app;
 
+    [HideInInspector] public bool isCompleted = false;
+
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
+        await Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
             var dependencyStatus = task.Result;
             if (dependencyStatus == Firebase.DependencyStatus.Available)
             {
@@ -20,6 +23,7 @@ public class InitializeFirebaseScript : MonoBehaviour
 
                 // Set a flag here to indicate whether Firebase is ready to use by your app.
                 Debug.Log("Firebase is ready to use.");
+                isCompleted = true;
             }
             else
             {
