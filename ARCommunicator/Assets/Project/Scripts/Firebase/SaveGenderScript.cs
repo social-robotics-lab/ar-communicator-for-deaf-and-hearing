@@ -8,9 +8,6 @@ using UnityEngine.UI;
 
 public class SaveGenderScript : MonoBehaviour
 {
-    //public Button femaleButton;
-    //public Button maleButton;
-
     public string userId;
 
     // Start is called before the first frame update
