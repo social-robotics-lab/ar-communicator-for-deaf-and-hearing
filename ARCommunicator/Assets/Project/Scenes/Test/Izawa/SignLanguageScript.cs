@@ -2,17 +2,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Firebase.Database;
 
-public class SearchIDHandler : MonoBehaviour
+public class SearchID : MonoBehaviour
 {
     private DatabaseReference databaseReference;
     private ScenarioToDict scenarioToDict;
     private Dictionary<int, string> dict;
-    private List<string> userIds = new List<string> { "user1", "user2", "user3" };
 
     // Animatorの参照を追加
     public Animator animator;
-    public string animatorParameterName = "MotionID"; // ここにAnimatorのパラメーター名を指定
-    private const int idleMotionID = 0; // idleMotionのIDを定数として定義
+    public string animatorParameterName = "SignMessageId"; // ここにAnimatorのパラメーター名を指定
+
+    // 監視するユーザーIDを指定できるようにするための変数
+    public string targetUserId = "user1";
+
+    // ScenarioIdMessageDictを定義
+    private Dictionary<int, string> ScenarioIdMessageDict;
 
     void Start()
     {
@@ -22,23 +26,10 @@ public class SearchIDHandler : MonoBehaviour
         // ScenarioToDictを初期化し、辞書を取得
         scenarioToDict = new ScenarioToDict();
         dict = scenarioToDict.GetScenarioDictionary();
+        ScenarioIdMessageDict = dict; // ScenarioIdMessageDictに辞書を設定
 
-        // 初期状態でAnimatorのパラメーターをidleMotionIDに設定
-        if (animator != null)
-        {
-            animator.SetInteger(animatorParameterName, idleMotionID);
-            Debug.Log("Animator parameter set to idleMotionID: " + idleMotionID);
-        }
-        else
-        {
-            Debug.LogError("Animator is not assigned.");
-        }
-
-        // 各ユーザーに対してメッセージリスナーを設定
-        foreach (string userId in userIds)
-        {
-            AttachMessageListener(userId, UseMessage);
-        }
+        // 特定のユーザーに対してメッセージリスナーを設定
+        AttachMessageListener(targetUserId, UseMessage);
     }
 
     // メッセージリスナーを指定したユーザーに追加するメソッド
@@ -81,7 +72,7 @@ public class SearchIDHandler : MonoBehaviour
     // メッセージに基づいてIDを辞書から検索するメソッド
     void FindIDByMessage(string message)
     {
-        foreach (KeyValuePair<int, string> kvp in dict)
+        foreach (KeyValuePair<int, string> kvp in ScenarioIdMessageDict)
         {
             if (kvp.Value == message)
             {
@@ -98,10 +89,27 @@ public class SearchIDHandler : MonoBehaviour
                     Debug.LogError("Animator is not assigned.");
                 }
 
+                // SignLanguageメソッドを呼び出してAnimatorにIDを設定
+                SignLanguage(kvp.Key);
+
                 return;
             }
         }
 
         Debug.Log("Message not found in dictionary.");
+    }
+
+    // メッセージIDに基づいてAnimatorのパラメーターを設定するメソッド
+    public void SignLanguage(int messageId)
+    {
+        if (animator != null)
+        {
+            animator.SetInteger("SignMessageId", messageId);
+            Debug.Log("SignMessageId parameter set to ID: " + messageId);
+        }
+        else
+        {
+            Debug.LogError("Animator is not assigned.");
+        }
     }
 }
