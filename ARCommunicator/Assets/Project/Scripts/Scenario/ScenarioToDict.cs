@@ -19,7 +19,7 @@ public class ScenarioToDict
                 if (isFirstLine)
                 {
                     isFirstLine = false;
-                    continue; // スキップヘッダー
+                    continue;
                 }
 
                 string[] elements = line.Split(',');
