@@ -4,6 +4,8 @@ using UnityEngine;
 using Firebase.Extensions;
 using Firebase;
 using Firebase.Database;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 
 
 
@@ -12,8 +14,10 @@ public class ListenMessageChangedScript : MonoBehaviour
     private DatabaseReference databaseReference;
 
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
+        await UniTask.WaitUntil(() => this.GetComponent<InitializeFirebaseScript>().isCompleted);
+
         // データベースのルート参照を取得
         databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
     }

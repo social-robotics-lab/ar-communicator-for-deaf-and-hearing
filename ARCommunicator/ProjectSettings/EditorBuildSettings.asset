@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/Test/Kondo/KondoTest.unity
     guid: 046d6a5f7efbbab43aad911462f2b049
+  - enabled: 0
+    path: Assets/Project/Scenes/Test/Kawabe/SampleMainScene.unity
+    guid: 3015ba917efbe4407a7ef42dd9ef30c6
+  - enabled: 0
+    path: Assets/Project/Scenes/Test/Kawabe/FirebaseSampleScenes/SampleChangeGender.unity
+    guid: 5bb02aaf56a7d4b17be33c4c327bc3c8
+  - enabled: 1
+    path: Assets/Project/Scenes/Test/Kawabe/SettingsSampleScenes/SampleSettingsScene.unity
+    guid: 0e0c4f1d03d054191b4dd6b666bd9de6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 54c0c5aeff9bb044181038d1adc5205e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b9a4faf4ac2284f389aa503d9f37f34f, type: 2}
