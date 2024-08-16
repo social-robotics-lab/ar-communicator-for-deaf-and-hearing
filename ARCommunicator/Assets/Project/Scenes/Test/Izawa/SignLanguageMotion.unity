@@ -173,11 +173,11 @@ MonoBehaviour:
   myUserId: user1
   numberOfUsers: 3
   maleAvatars:
-  - {fileID: 1872415744}
-  - {fileID: 1019477762}
-  femaleAvatars:
   - {fileID: 977259315}
   - {fileID: 1764150070}
+  femaleAvatars:
+  - {fileID: 1872415744}
+  - {fileID: 1019477762}
   initializeFirebaseScript: {fileID: 660416265}
   isCompleted: 0
 --- !u!1 &425654889
