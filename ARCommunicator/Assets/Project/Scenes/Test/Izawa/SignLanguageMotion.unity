@@ -178,6 +178,7 @@ MonoBehaviour:
   femaleAvatars:
   - {fileID: 977259315}
   - {fileID: 1764150070}
+  initializeFirebaseScript: {fileID: 660416265}
   isCompleted: 0
 --- !u!1 &425654889
 GameObject:
@@ -395,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac65c7ea89d2947cea796eed0e102a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCompleted: 0
 --- !u!4 &660416266
 Transform:
   m_ObjectHideFlags: 0
