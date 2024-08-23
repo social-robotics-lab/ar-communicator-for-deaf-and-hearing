@@ -32,7 +32,7 @@ public class AllAvatarsManagerScript : MonoBehaviour
         await UniTask.WaitUntil(() => initializeFirebaseScript.isCompleted);
 
         await AssignUserIdToAvatarByGender(userIds, maleAvatars, femaleAvatars);
-        Debug.Log("userId assigned to avatar is completed");
+        Debug.Log("userId assigned to avatar is completed.");
         isCompleted = true;
     }
 
