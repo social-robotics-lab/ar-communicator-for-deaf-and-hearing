@@ -104,13 +104,13 @@
 ## :runner: アバターのモーションを追加する
 > [!NOTE]\
 > [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
-> SignLanguageMotion.unitypackage は、研究室のNASからダウンロードしてください。
+> SignLanguageMotions.unitypackage は、研究室のNASからダウンロードしてください。
 > 
 > モーションはインポート後に自動で設定されます。\
 > 設定が反映されない場合は、`Project/Animations/` フォルダの [Male Animation Controller] と [Female Animation Controller] の [Motion] すべてに、モーションファイルを手動でアタッチしてください。
 
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
-2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotion.unitypackage] をUnityプロジェクトにインポートします。
+2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotions.unitypackage] をUnityプロジェクトにインポートします。
 
 ## :notebook: シナリオデータを追加する
 > [!NOTE]\
