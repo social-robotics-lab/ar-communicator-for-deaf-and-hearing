@@ -107,6 +107,10 @@
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
 2. [Assets] > [Import Package] > [Custom Package] から **手話モーション Unity Package** をUnityプロジェクトにインポートします。
 
+> [!WARNING]\
+> モーションはインポート後に自動で設定されます。\
+> 設定が反映されない場合は、`Project/Animations/` にある [Male Animation Controller] と [Female Animation Controller] にモーションを手動でアタッチしてください。
+
 ## :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
 2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
