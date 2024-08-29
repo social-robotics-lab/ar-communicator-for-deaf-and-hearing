@@ -4,7 +4,7 @@
 * Meta Quest3
 
 ### 開発環境
-* MacBook Air
+* MacBook (M2)
 * Windows 10
 * Windows 11
 
@@ -93,10 +93,12 @@
 4. Import Unity Packageウィンドウで [Import] をクリックします。
 
 ## :package: 依存パッケージをインポートする
-以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
+1. 以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
 
-* [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) **VRM 0.x**  UnityPackage
-* [UniTask (v.2.5.5)](https://github.com/Cysharp/UniTask/releases/tag/2.5.5) UnityPackage
+    * [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) **VRM 0.x**  UnityPackage
+    * [UniTask (v.2.5.5)](https://github.com/Cysharp/UniTask/releases/tag/2.5.5) UnityPackage
+
+2. [Window] > [TextMeshPro] > [Import TMP Essential Resources] を選択して、[import] をクリックします。
 
 ## :runner: アバターのモーションを追加する
 > [!NOTE]\
