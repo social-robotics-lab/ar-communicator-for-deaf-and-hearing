@@ -120,10 +120,8 @@
 
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
-> [!WARNING]\
-> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
-
-> [!NOTE]\
+> [!TIP]\
+> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。\
 > プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
 > <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
 
@@ -132,7 +130,7 @@
 > Meta Quest3でプロジェクトを実行するには、Meta Quest3を開発者モードに変更してください。\
 > 詳しくは、[開発とテスト用にデバイスを有効にする - Oculus Developer](https://developer.oculus.com/documentation/unity/unity-enable-device/) をご覧ください。
 
-> [!WARNING]\
+> [!TIP]\
 > 過去に同じヘッドセットでこのプロジェクトを実行したことがある場合、ヘッドセットにこのプロジェクトのアプリ（ARCommunicator）が残っていると、ビルドに失敗する場合があります。\
 > アプリの削除は、ヘッドセットで [アプリ] > [提供元不明] を選択し、 ARCommunicator の右にあるメニューバーから [アンインストール] を選択してください。
 
