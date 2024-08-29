@@ -17,11 +17,10 @@
 5. [:robot: AndroidアプリをFirebaseに登録する](#robot-androidアプリをfirebaseに登録する)
 6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
 7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
-8. [:vertical_traffic_light: スクリプトの実行順序を指定する](#vertical_traffic_light-スクリプトの実行順序を指定する)
-9. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-10. [:runner: アバターのモーションを追加する](#runner-アバターのモーションを追加する)
-11. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
-12. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
+8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
+9. [:runner: アバターのモーションを追加する](#runner-アバターのモーションを追加する)
+10. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
+11. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
 
 
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
@@ -101,15 +100,15 @@
 
 ## :runner: アバターのモーションを追加する
 > [!NOTE]\
-> [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
-> 手話モーション Unity Package は、研究室のNASに保存されています。
+> * [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
+> * SignLanguageMotion.unitypackage は、研究室のNASに保存されています。
 
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
-2. [Assets] > [Import Package] > [Custom Package] から **手話モーション Unity Package** をUnityプロジェクトにインポートします。
+2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotion.unitypackage] をUnityプロジェクトにインポートします。
 
 > [!WARNING]\
 > モーションはインポート後に自動で設定されます。\
-> 設定が反映されない場合は、`Project/Animations/` にある [Male Animation Controller] と [Female Animation Controller] にモーションを手動でアタッチしてください。
+> 設定が反映されない場合は、`Project/Animations/` フォルダの [Male Animation Controller] と [Female Animation Controller] の [Motion] すべてに、モーションファイルを手動でアタッチしてください。
 
 ## :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
