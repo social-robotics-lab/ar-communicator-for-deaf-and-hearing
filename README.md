@@ -19,8 +19,9 @@
 7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
 8. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
 9. [:runner: アバターのモーションを追加する](#runner-アバターのモーションを追加する)
-10. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
-11. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
+10. [:notebook: シナリオデータを追加する](#notebook-シナリオデータを追加する)
+11. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
+12. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
 
 
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
@@ -103,13 +104,19 @@
 ## :runner: アバターのモーションを追加する
 > [!NOTE]\
 > [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
-> SignLanguageMotion.unitypackage は、研究室のNASに保存されています。
+> SignLanguageMotion.unitypackage は、研究室のNASからダウンロードしてください。
 > 
 > モーションはインポート後に自動で設定されます。\
 > 設定が反映されない場合は、`Project/Animations/` フォルダの [Male Animation Controller] と [Female Animation Controller] の [Motion] すべてに、モーションファイルを手動でアタッチしてください。
 
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
 2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotion.unitypackage] をUnityプロジェクトにインポートします。
+
+## :notebook: シナリオデータを追加する
+> [!NOTE]\
+> Scenario.csvは研究室のNASからダウンロードしてください。
+
+1. `Resources/` フォルダに [Scenario.csv] を追加します。
 
 ## :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
