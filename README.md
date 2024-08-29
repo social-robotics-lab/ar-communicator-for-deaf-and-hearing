@@ -100,8 +100,8 @@
 
 ## :runner: アバターのモーションを追加する
 > [!NOTE]\
-> * [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
-> * SignLanguageMotion.unitypackage は、研究室のNASに保存されています。
+> [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
+> SignLanguageMotion.unitypackage は、研究室のNASに保存されています。
 
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
 2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotion.unitypackage] をUnityプロジェクトにインポートします。
