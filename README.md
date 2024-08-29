@@ -92,12 +92,6 @@
 
 4. Import Unity Packageウィンドウで [Import] をクリックします。
 
-## :vertical_traffic_light: スクリプトの実行順序を指定する
-1. [Edit] > [Project Settings] > [Script Execution Order] に移動する。
-2. [Initialize Firebase Script] を追加し、 Default Time の上に配置し、[Apply] を選択する。
-
-    <img width="600" src="Documents/Images/ScriptExecutionOrder.png">
-
 ## :package: 依存パッケージをインポートする
 以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
 
