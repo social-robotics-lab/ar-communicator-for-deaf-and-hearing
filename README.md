@@ -4,23 +4,24 @@
 * Meta Quest3
 
 ### 開発環境
-* MacBook Air
+* MacBook (M2)
 * Windows 10
 * Windows 11
 
 # 📚 ドキュメント
 **[:rocket: クイックスタート](#rocket-クイックスタート)**
-1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#diamond_shape_with_a_dot_inside-unityをインストールする)
-2. [:file_folder: プロジェクトを追加する](#file_folder-プロジェクトを追加する)
-3. [:fire: Firebaseプロジェクトを作成する](#fire-firebaseプロジェクトを作成する)
-4. [:fire: Firebase Realtime Databaseを作成する](#fire-firebase-realtime-databaseを作成する)
-5. [:robot: AndroidアプリをFirebaseに登録する](#robot-androidアプリをfirebaseに登録する)
-6. [:wrench: Firebase構成ファイルを追加する](#wrench-firebase構成ファイルを追加する)
-7. [:toolbox: Firebase Unity SDKを追加する](#toolbox-firebase-unity-sdkを追加する)
-8. [:vertical_traffic_light: スクリプトの実行順序を指定する](#vertical_traffic_light-スクリプトの実行順序を指定する)
-9. [:package: 依存パッケージをインポートする](#package-依存パッケージをインポートする)
-10. [:cloud_with_lightning: Unity Cloudと連携する](#cloud_with_lightning-unity-cloudと連携する)
-11. [:hammer_and_wrench: ビルド＆実行する](#hammer_and_wrench-ビルド＆実行する)
+1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#1-diamond_shape_with_a_dot_inside-unityをインストールする)
+2. [:file_folder: プロジェクトを追加する](#2-file_folder-プロジェクトを追加する)
+3. [:fire: Firebaseプロジェクトを作成する](#3-fire-firebaseプロジェクトを作成する)
+4. [:fire: Firebase Realtime Databaseを作成する](#4-fire-firebase-realtime-databaseを作成する)
+5. [:robot: AndroidアプリをFirebaseに登録する](#5-robot-androidアプリをfirebaseに登録する)
+6. [:wrench: Firebase構成ファイルを追加する](#6-wrench-firebase構成ファイルを追加する)
+7. [:toolbox: Firebase Unity SDKを追加する](#7-toolbox-firebase-unity-sdkを追加する)
+8. [:package: 依存パッケージをインポートする](#8-package-依存パッケージをインポートする)
+9. [:runner: アバターのモーションを追加する](#9-runner-アバターのモーションを追加する)
+10. [:notebook: シナリオデータを追加する](#10-notebook-シナリオデータを追加する)
+11. [:cloud_with_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
+12. [:hammer_and_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド＆実行する)
 
 
 **[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
@@ -32,14 +33,14 @@
 # :rocket: クイックスタート
 以下が本システムのセットアップ手順です。
 
-## :diamond_shape_with_a_dot_inside: Unityをインストールする
+## 1. :diamond_shape_with_a_dot_inside: Unityをインストールする
 1. [Download the Unity Hub - Unity](https://unity.com/ja/download) からUnity Hubをダウンロードします。
 2. [Unity download archive - Unity](https://unity.com/ja/releases/editor/archive) で **2022.3.29f1** バージョンのUnityをインストールします。
 3. Meta Quest用にビルドするために以下のモジュールを追加します。
     * Android Build Support ( Android SDK & NDK Tools, OpenJDK )
 
 
-## :file_folder: プロジェクトを追加する
+## 2. :file_folder: プロジェクトを追加する
 1. このリポジトリをクローンします。
     ```
     git clone https://github.com/social-robotics-lab/ar-communicator-for-deaf-and-hearing.git
@@ -47,7 +48,7 @@
 2. Unity HubのProjectsで、[Add] をクリックします。
 3. ARCommunicatorフォルダを選択して、作成されたプロジェクトを開きます。
 
-## :fire: Firebaseプロジェクトを作成する
+## 3. :fire: Firebaseプロジェクトを作成する
 > [!Note]\
 > 詳しくは [Unity プロジェクトに Firebase を追加する - Firebaseドキュメント](https://firebase.google.com/docs/unity/setup?hl=ja) をご覧ください。
 
@@ -56,7 +57,7 @@
 3. Googleアナリティクスを有効にして、Firebaseプロジェクトを作成します。
 4. 処理が完了すると、[Firebaseコンソール](https://console.firebase.google.com/?hl=ja) にFirebaseプロジェクトの概要ページが表示されます。
 
-## :fire: Firebase Realtime Databaseを作成する
+## 4. :fire: Firebase Realtime Databaseを作成する
 > [!Note]\
 > データベースは、システムを操作することで変更されるため、セットアップ時は仮の値で保存してください。\
 > Firebase Realtime Databaseについては [Firebase Realtime Database - Firebaseドキュメント](https://firebase.google.com/docs/database?hl=ja) などをご覧ください。
@@ -71,18 +72,18 @@
 
     <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
 
-## :robot: AndroidアプリをFirebaseに登録する
+## 5. :robot: AndroidアプリをFirebaseに登録する
 1. プロジェクトの概要ページの中央で、[Unityアイコン] をクリックして設定ワークフローを起動します。
 2. [Androidアプリとして登録] にチェックを入れます。
 3. Androidパッケージ名に `com.DefaultCompany.ARCommunicator` と入力します。
 4. アプリのニックネームに任意のアプリ名を入力して、[アプリを登録] をクリックします。
 
-## :wrench: Firebase構成ファイルを追加する
+## 6. :wrench: Firebase構成ファイルを追加する
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`google-services.json` をダウンロードします。
 2. Unityプロジェクトで、`Assets`フォルダの中に`StreamingAssets`フォルダを作成します。
 3. `StreamingAssets`フォルダの中に `google-services.json`を移動します。
 
-## :toolbox: Firebase Unity SDKを追加する
+## 7. :toolbox: Firebase Unity SDKを追加する
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) で`Firebase Unity SDK` をダウンロードし、SDKを解凍します。
 2. Unityプロジェクトで、[Assets] > [Import Package] > [Custom Package] を選択します。
 3. 解凍したSDKから、以下のFirebaseプロダクトを選択します。
@@ -92,19 +93,32 @@
 
 4. Import Unity Packageウィンドウで [Import] をクリックします。
 
-## :vertical_traffic_light: スクリプトの実行順序を指定する
-1. [Edit] > [Project Settings] > [Script Execution Order] に移動する。
-2. [Initialize Firebase Script] を追加し、 Default Time の上に配置し、[Apply] を選択する。
+## 8. :package: 依存パッケージをインポートする
+1. 以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
 
-    <img width="600" src="Documents/Images/ScriptExecutionOrder.png">
+    * [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) **VRM 0.x**  UnityPackage
+    * [UniTask (v.2.5.5)](https://github.com/Cysharp/UniTask/releases/tag/2.5.5) UnityPackage
 
-## :package: 依存パッケージをインポートする
-以下のファイルをダウンロードし、[Assets] > [Import Package] > [Custom Package] からUnityプロジェクトにインポートします。
+2. [Window] > [TextMeshPro] > [Import TMP Essential Resources] を選択して、[import] をクリックします。
 
-* [UniVRM (v.110.0)](https://github.com/vrm-c/UniVRM/releases/tag/v0.110.0) の **VRM 0.x**  UnityPackage
-* [UniTask (v.2.5.5)](https://github.com/Cysharp/UniTask/releases/tag/2.5.5) UnityPackage
+## 9. :runner: アバターのモーションを追加する
+> [!NOTE]\
+> [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
+> SignLanguageMotions.unitypackage は、研究室のNASからダウンロードしてください。
+> 
+> モーションはインポート後に自動で設定されます。\
+> 設定が反映されない場合は、`Project/Animations/` フォルダの [Male Animation Controller] と [Female Animation Controller] の [Motion] すべてに、モーションファイルを手動でアタッチしてください。
 
-## :cloud_with_lightning: Unity Cloudと連携する
+1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
+2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotions.unitypackage] をUnityプロジェクトにインポートします。
+
+## 10. :notebook: シナリオデータを追加する
+> [!NOTE]\
+> Scenario.csvは研究室のNASからダウンロードしてください。
+
+1. `Resources/` フォルダに [Scenario.csv] を追加します。
+
+## 11. :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
 2. プロジェクトが [CONNECTED] に変更されたら、[CONNECTED] から [View Unity Cloud Project] を開きます。
 3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
@@ -112,19 +126,18 @@
 
     <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
 
-> [!WARNING]\
-> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
-
 > [!NOTE]\
+> UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
+> 
 > プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
 > <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
 
-## :hammer_and_wrench: ビルド＆実行する
+## 12. :hammer_and_wrench: ビルド＆実行する
 > [!IMPORTANT]\
 > Meta Quest3でプロジェクトを実行するには、Meta Quest3を開発者モードに変更してください。\
 > 詳しくは、[開発とテスト用にデバイスを有効にする - Oculus Developer](https://developer.oculus.com/documentation/unity/unity-enable-device/) をご覧ください。
 
-> [!WARNING]\
+> [!NOTE]\
 > 過去に同じヘッドセットでこのプロジェクトを実行したことがある場合、ヘッドセットにこのプロジェクトのアプリ（ARCommunicator）が残っていると、ビルドに失敗する場合があります。\
 > アプリの削除は、ヘッドセットで [アプリ] > [提供元不明] を選択し、 ARCommunicator の右にあるメニューバーから [アンインストール] を選択してください。
 

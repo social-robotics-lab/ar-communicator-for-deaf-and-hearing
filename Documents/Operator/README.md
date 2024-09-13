@@ -2,10 +2,10 @@
 
 # :books: ドキュメント
 **[:rocket: クイックスタート](#rocket-クイックスタート)**
-1. [:whale: Docker Desktopをインストールする](#whale-docker-desktopをインストールする)
-2. [:globe_with_meridians: ウェブアプリをFirebaseに登録する](#globe_with_meridians-ウェブアプリをfirebaseに登録する)
-3. [:nut_and_bolt: 環境変数を設定する](#nut_and_bolt-環境変数を設定する)
-4. [:runner: 操作画面を起動する](#runner-操作画面を起動する)
+1. [:whale: Docker Desktopをインストールする](#1-whale-docker-desktopをインストールする)
+2. [:globe_with_meridians: ウェブアプリをFirebaseに登録する](#2-globe_with_meridians-ウェブアプリをfirebaseに登録する)
+3. [:nut_and_bolt: 環境変数を設定する](#3-nut_and_bolt-環境変数を設定する)
+4. [:runner: 操作画面を起動する](#4-runner-操作画面を起動する)
 
 **[:book: 操作画面マニュアル](Manual.md)**
 * [セットアップ](Manual.md#セットアップ)
@@ -17,10 +17,10 @@
 # :rocket: クイックスタート
 以下が操作画面のセットアップ手順です。
 
-## :whale: Docker Desktopをインストールする
+## 1. :whale: Docker Desktopをインストールする
 [Docker Desktop - Docker](https://www.docker.com/ja-jp/products/docker-desktop/) からDocker Desktopをインストールします。
 
-## :globe_with_meridians: ウェブアプリをFirebaseに登録する
+## 2. :globe_with_meridians: ウェブアプリをFirebaseに登録する
 [アプリを登録する - Firebaseドキュメント](https://firebase.google.com/docs/web/setup?hl=ja#register-app) を参考にして、ウェブアプリをFirebaseに登録します。
 
 1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja) から使用するプロジェクトを開き、中央にある [ウェブアイコン] をクリックして設定ワークフローを起動します。
@@ -29,7 +29,7 @@
 
 2. アプリのニックネームに任意のアプリ名を入力して、[アプリを登録] をクリックします。
 
-## :nut_and_bolt: 環境変数を設定する
+## 3. :nut_and_bolt: 環境変数を設定する
 1. `operator/web/`フォルダの中に `.env.local`ファイルを作成します。
 
 2. `.env.local` の内容を下記のように変更します。
@@ -54,7 +54,7 @@
     <img width="500" alt="EnvFileExample" src="Images/EnvFileExample.png"></img>
 
 
-## :runner: 操作画面を起動する
+## 4. :runner: 操作画面を起動する
 1. ターミナルで `operator/` に移動します。
     ```
     cd operator/
