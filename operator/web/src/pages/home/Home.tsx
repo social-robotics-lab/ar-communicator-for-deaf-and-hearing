@@ -11,7 +11,12 @@ const Home:React.FC=()=>{
             <div className="buttons">
                 {Object.keys(usersInfo).map((userKey,index)=>{
                     return(
-                        <UserSelectButton key={index} userKey={userKey} isDHH={userKey==="user1"||userKey==="user2"||userKey==="user3"?usersInfo[userKey]["isDHH"]:undefined} />
+                        <UserSelectButton 
+                            key={index}
+                            userKey={userKey}
+                            isDHH={userKey==="user1"||userKey==="user2"||userKey==="user3"?usersInfo[userKey]["isDHH"]:undefined}
+                            gender={userKey==="user1"||userKey==="user2"||userKey==="user3"?usersInfo[userKey]["gender"]:undefined} 
+                        />
                     )
                 })}
             </div>
