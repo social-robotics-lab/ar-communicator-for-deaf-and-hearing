@@ -3,9 +3,18 @@ import { db } from "../firebase/firebaseConfig";
 import { ref, onValue } from "firebase/database";
 
 export type UsersInfoType={
-    user1:{isDHH:boolean},
-    user2:{isDHH:boolean},
-    user3:{isDHH:boolean}
+    user1:{
+        isDHH:boolean,
+        gender:string
+    },
+    user2:{
+        isDHH:boolean,
+        gender:string
+    },
+    user3:{
+        isDHH:boolean,
+        gender:string
+    }
 }
 export const UsersInfoContext=createContext(
     {} as {
@@ -21,9 +30,18 @@ export const UsersInfoProvider:React.FC<PropsType>=(props)=>{
     const {children}=props;
     const [usersInfo,setUsersInfo]=useState<UsersInfoType>(
         {
-            user1:{isDHH:true},
-            user2:{isDHH:true},
-            user3:{isDHH:true}
+            user1:{
+                isDHH:true,
+                gender:"m"
+            },
+            user2:{
+                isDHH:true,
+                gender:"m"
+            },
+            user3:{
+                isDHH:true,
+                gender:"m"
+            }
         }
     );
 
@@ -34,9 +52,18 @@ export const UsersInfoProvider:React.FC<PropsType>=(props)=>{
                 const data=snapshot.val();
                 setUsersInfo(
                     {
-                        user1:{isDHH:data.user1.isDHH},
-                        user2:{isDHH:data.user2.isDHH},
-                        user3:{isDHH:data.user3.isDHH}
+                        user1:{
+                            isDHH:data.user1.isDHH,
+                            gender:data.user1.gender
+                        },
+                        user2:{
+                            isDHH:data.user2.isDHH,
+                            gender:data.user2.gender
+                        },
+                        user3:{
+                            isDHH:data.user3.isDHH,
+                            gender:data.user3.gender
+                        }
                     });
             });
         }catch(error:any){

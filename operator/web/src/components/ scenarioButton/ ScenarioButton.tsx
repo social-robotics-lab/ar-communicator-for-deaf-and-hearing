@@ -11,7 +11,7 @@ const ScenarioButton:React.FC<{userKey:string,scenario:string}>=({userKey,scenar
         const styleDone:CSSProperties={color:"#12d744"};
         try{
             if(userKey==="user1"||userKey==="user2"||userKey==="user3"){
-                writeMessageData(userKey,usersInfo[userKey]["isDHH"],scenario);
+                writeMessageData(userKey,usersInfo[userKey]["isDHH"],usersInfo[userKey]["gender"],scenario);
             }
             setStyleCheckMark(styleDone); 
         }catch(error:any){
