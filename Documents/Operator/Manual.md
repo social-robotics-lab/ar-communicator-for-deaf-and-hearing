@@ -10,7 +10,6 @@
 ## ユーザについて
 * システムの使用ユーザは３人を想定しています。各ユーザ操作画面は、ホームページの [user1] [user2] [user3] のボタンから移動できます。
 * ホームページに記載されている `user1` `user2` `user3` は Firebase Realtime Database の `user1` `user2` `user3` と紐づいています。
-* `isDHH` は、各ユーザがDHH ( Deaf and Hard of Hearing ) かどうかのデータを示しています。
 
 ## シナリオファイルについて
 1. Excelなどで下記のようなファイルを作成します。
