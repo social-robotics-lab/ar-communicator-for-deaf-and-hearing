@@ -51,9 +51,9 @@ public class AllAvatarsManagerScript : MonoBehaviour
             }
         }
 
-        if (avatars.Length < numberOfUsers - 1)
+        if (avatars.Length < numberOfUsers)
         {
-            Debug.LogError($"There are not enough avatars. At least {numberOfUsers - 1} avatars are required.");
+            Debug.LogError($"There are not enough avatars. At least {numberOfUsers} avatars are required.");
         }
     }
 
