@@ -29,10 +29,11 @@ public class AvatarControllerScript : MonoBehaviour
         }
         else
         {
-            Debug.Log($"{avatar.name} is {avatarUserId}");
-
             // 使用者と相手のisDHHを取得
             await SetIsDHHAsync();
+
+            Debug.Log($"{avatar.name} is {avatarUserId} (isDHH={partnerIsDHH})");
+
             // messageから相手のアバターの振る舞いを決定
             BehaviorAvatar();
         }
@@ -58,7 +59,6 @@ public class AvatarControllerScript : MonoBehaviour
         try
         {
             partnerIsDHH = await GetIsDHH.GetIsDHHAsync(avatarUserId);
-            Debug.Log($"this avatar is {avatar.name}\npartner's isDHH: {partnerIsDHH}");
         }
         catch (System.ArgumentNullException error)
         {
