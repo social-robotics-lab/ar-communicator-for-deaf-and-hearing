@@ -73,38 +73,32 @@ public class AllAvatarsManagerScript : MonoBehaviour
     {
         GetGenderScript GetGender = new GetGenderScript();
 
-        //GameObject[] randomMaleAvatars = maleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
-        //GameObject[] randomFemaleAvatars = femaleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
-
-        int maleCount = 0;
-        int femaleCount = 0;
-        foreach (string userId in userIds)
+        for(int i=0;i<numberOfUsers; i++)
         {
+            string gender = null;
+            string userId = userIds[i];
+
             if (userId != myUserId)
             {
                 try
                 {
-                    string gender = null;
                     gender = await GetGender.GetGenderAsync(userId);
                     if (gender != null)
                     {
                         if (gender == "m")
                         {
-                            maleAvatars[maleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
-                            maleCount++;
+                            maleAvatars[i].GetComponent<AvatarControllerScript>().avatarUserId = userId;
                         }
                         else
                         {
-                            femaleAvatars[femaleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
-                            femaleCount++;
+                            femaleAvatars[i].GetComponent<AvatarControllerScript>().avatarUserId = userId;
                         }
                     }
                 }
-                catch (System.ArgumentNullException error)
+                catch(System.NullReferenceException error)
                 {
                     Debug.LogError(error);
                 }
-
             }
         }
     }
