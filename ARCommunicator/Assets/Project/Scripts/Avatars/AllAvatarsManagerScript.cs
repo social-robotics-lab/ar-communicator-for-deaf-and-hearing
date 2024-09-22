@@ -95,7 +95,7 @@ public class AllAvatarsManagerScript : MonoBehaviour
                         }
                     }
                 }
-                catch(System.NullReferenceException error)
+                catch(System.ArgumentNullException error)
                 {
                     Debug.LogError(error);
                 }
