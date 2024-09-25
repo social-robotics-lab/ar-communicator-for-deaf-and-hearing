@@ -38,4 +38,10 @@ public class OnButtonClickedScript : MonoBehaviour
     {
         saveIsDHHScript.WriteIsDHH(saveIsDHHScript.userId, false);
     }
+
+    public void OnStartButtonClicked()
+    {
+        //メインシーンに移動
+        Debug.Log("Move main scene.");
+    }
 }

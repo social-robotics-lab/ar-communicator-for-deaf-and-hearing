@@ -4144,7 +4144,7 @@ PrefabInstance:
       objectReference: {fileID: 2046586595}
     - target: {fileID: 7005771719227092794, guid: 8b3a0f3801e0b4e69b35c7bf7cb307de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnFemaleButtonClicked
+      value: OnStartButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 7005771719227092794, guid: 8b3a0f3801e0b4e69b35c7bf7cb307de, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
