@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OnButtonClickedScript : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class OnButtonClickedScript : MonoBehaviour
 
     public TextMeshProUGUI displayCurrentUserId;
 
-    [HideInInspector] public string userId;
+    public string mainSceneName;
+
+
+    [HideInInspector] public static string userId;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +54,7 @@ public class OnButtonClickedScript : MonoBehaviour
     public void OnStartButtonClicked()
     {
         //メインシーンに移動
-        Debug.Log("Move main scene.");
+        Debug.Log("Move to main scene.");
+        SceneManager.LoadScene(mainSceneName);
     }
 }

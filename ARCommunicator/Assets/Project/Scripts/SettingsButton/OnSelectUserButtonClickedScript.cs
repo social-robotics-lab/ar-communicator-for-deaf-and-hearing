@@ -5,8 +5,6 @@ using UnityEngine;
 public class OnSelectUserButtonClickedScript : MonoBehaviour
 {
 
-    public OnButtonClickedScript onButtonClickedScript;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +19,17 @@ public class OnSelectUserButtonClickedScript : MonoBehaviour
 
     public void OnUser1Clicked()
     {
-        onButtonClickedScript.userId = "user1";
+        OnButtonClickedScript.userId = "user1";
     }
 
     public void OnUser2Clicked()
     {
-        onButtonClickedScript.userId = "user2";
+        OnButtonClickedScript.userId = "user2";
     }
 
     public void OnUser3Clicked()
     {
-        onButtonClickedScript.userId = "user3";
+        OnButtonClickedScript.userId = "user3";
     }
 
 }
