@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OnButtonClickedScript : MonoBehaviour
 {
+
     public SaveIsDHHScript saveIsDHHScript;
 
     public SaveGenderScript saveGenderScript;
+
+    public TextMeshProUGUI displayCurrentUserId;
+
+    [HideInInspector] public string userId;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,27 +22,29 @@ public class OnButtonClickedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        displayCurrentUserId.text = userId;
         
     }
 
+
     public void OnMaleButtonClicked()
     {
-        saveGenderScript.WriteGender(saveGenderScript.userId, "m");
+        saveGenderScript.WriteGender(userId, "m");
     }
 
     public void OnFemaleButtonClicked()
     {
-        saveGenderScript.WriteGender(saveGenderScript.userId, "f");
+        saveGenderScript.WriteGender(userId, "f");
     }
 
     public void OnDeafButtonClicked()
     {
-        saveIsDHHScript.WriteIsDHH(saveIsDHHScript.userId, true);
+        saveIsDHHScript.WriteIsDHH(userId, true);
     }
 
     public void OnHearingButtonClicked()
     {
-        saveIsDHHScript.WriteIsDHH(saveIsDHHScript.userId, false);
+        saveIsDHHScript.WriteIsDHH(userId, false);
     }
 
     public void OnStartButtonClicked()
