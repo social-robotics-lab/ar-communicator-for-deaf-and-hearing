@@ -6,25 +6,48 @@ public class SpokenLanguageScript : MonoBehaviour
 {
     private GameObject Avatar;
 
+    // Animatorの参照を追加
+    public Animator animator;
+    public string animatorParameterName = "SpokenMessageId"; // ここにAnimatorのパラメーター名を指定
+    private Dictionary<int, string> ScenarioIdMessageDict; // ScenarioIdMessageDictを定義
+
     private void Start()
     {
         Avatar = this.gameObject;
+
+        // ScenarioToDictを初期化し、辞書を取得
+        ScenarioToDict scenarioToDict = new ScenarioToDict();
+        Dictionary<int, string> dict = scenarioToDict.GetScenarioDictionary();
+        ScenarioIdMessageDict = dict; // ScenarioIdMessageDictに辞書を設定
+
     }
 
-    private void Speech(string message)
-    {
-        Debug.Log($"this avatar is {Avatar.name}\nSpeechメソッド(message: {message})");
-        // TODO: 相手のアバター(Avatar)に発話させる
-    }
-    private void Gesture(string message)
-    {
-        Debug.Log($"this avatar is {Avatar.name}\nGestureメソッド(message: {message})");
-        // TODO: 相手のアバター(Avatar)にジェスチャーさせる
-    }
     public void SpokenLanguage(string message)
     {
-        Speech(message);
-        Gesture(message);
+        Debug.Log($"this avatar is {Avatar.name}\nSpokenLanguageメソッド(message: {message})");
+
+        foreach (KeyValuePair<int, string> kvp in ScenarioIdMessageDict)
+        {
+            if (kvp.Value == message)
+            {
+                // AnimatorのパラメーターにIDを設定
+                if (animator != null)
+                {
+                    animator.SetInteger(animatorParameterName, kvp.Key);
+                    animator.SetTrigger("MotionTrigger"); // トリガーをONにする
+                    Debug.Log("Animator parameter set to ID: " + kvp.Key);
+
+                }
+                else
+                {
+                    Debug.LogError("Animator is not assigned.");
+                }
+
+                return;
+            }
+        }
+
+        Debug.Log("Message not found in dictionary.");
     }
 
 }

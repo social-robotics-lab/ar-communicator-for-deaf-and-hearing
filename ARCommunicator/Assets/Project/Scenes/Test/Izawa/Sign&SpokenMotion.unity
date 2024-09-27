@@ -762,6 +762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8432036b800e44169598a961ce7bacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animatorParameterName: SpokenMessageId
 --- !u!114 &977259325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +946,7 @@ PrefabInstance:
     - target: {fileID: 8213319831411202810, guid: 8d0b55ec7cf198342b276af37b54f9ee, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c97abaf8c49188440a29fb20b859740d, type: 2}
+      objectReference: {fileID: 9100000, guid: dec0948f0ee43494fb1bec7931581845, type: 2}
     - target: {fileID: 8569535096262149650, guid: 8d0b55ec7cf198342b276af37b54f9ee, type: 3}
       propertyPath: m_Name
       value: Female2
@@ -998,6 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8432036b800e44169598a961ce7bacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animatorParameterName: SpokenMessageId
 --- !u!114 &1019477772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8432036b800e44169598a961ce7bacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animatorParameterName: SpokenMessageId
 --- !u!114 &1764150080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1424,7 @@ PrefabInstance:
     - target: {fileID: 3657953740145580419, guid: 76bd03035fc7e394f9e433bb33a664ff, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c97abaf8c49188440a29fb20b859740d, type: 2}
+      objectReference: {fileID: 9100000, guid: dec0948f0ee43494fb1bec7931581845, type: 2}
     - target: {fileID: 4394182236299066322, guid: 76bd03035fc7e394f9e433bb33a664ff, type: 3}
       propertyPath: m_Name
       value: Female1
@@ -1500,6 +1506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8432036b800e44169598a961ce7bacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animatorParameterName: SpokenMessageId
 --- !u!114 &1872415755
 MonoBehaviour:
   m_ObjectHideFlags: 0
