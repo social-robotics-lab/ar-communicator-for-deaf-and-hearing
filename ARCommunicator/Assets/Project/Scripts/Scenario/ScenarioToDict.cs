@@ -7,7 +7,7 @@ public class ScenarioToDict
     public Dictionary<int, string> GetScenarioDictionary()
     {
         Dictionary<int, string> scenarioDict = new Dictionary<int, string>();
-        TextAsset csvFile = Resources.Load<TextAsset>("ScenarioSample");
+        TextAsset csvFile = Resources.Load<TextAsset>("ScenarioUnity");
 
         if (csvFile != null)
         {
