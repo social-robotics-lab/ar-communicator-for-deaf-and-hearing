@@ -6,8 +6,15 @@ public class SpokenLanguageScript : MonoBehaviour
 {
     private GameObject Avatar;
 
-    // Animatorの参照を追加
+    // AudioSourceをアタッチ
+    public AudioSource audioSource;
+
+    // Animatorにリンクする
     public Animator animator;
+
+    // 69個の音声クリップを保持するリスト
+    public List<AudioClip> audioClips;
+
     public string animatorParameterName = "SpokenMessageId"; // ここにAnimatorのパラメーター名を指定
     private Dictionary<int, string> ScenarioIdMessageDict; // ScenarioIdMessageDictを定義
 
@@ -36,6 +43,9 @@ public class SpokenLanguageScript : MonoBehaviour
                     animator.SetInteger(animatorParameterName, kvp.Key);
                     animator.SetTrigger("MotionTrigger"); // トリガーをONにする
                     Debug.Log("Animator parameter set to ID: " + kvp.Key);
+                    // 該当する音声を再生
+                    audioSource.clip = audioClips[kvp.Key];
+                    audioSource.Play();
 
                 }
                 else
