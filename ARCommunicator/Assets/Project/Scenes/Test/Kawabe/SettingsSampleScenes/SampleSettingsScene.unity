@@ -4239,8 +4239,7 @@ MonoBehaviour:
   saveIsDHHScript: {fileID: 2015398379}
   saveGenderScript: {fileID: 2015398378}
   displayCurrentUserId: {fileID: 923763793}
-  mainSceneName: MainScene
-  userId: user1
+  mainSceneName: ResolveConflictSign&SpokenMotion
 --- !u!114 &2046586596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,7 +4289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9983aeca66a9344e8a3fc603628c355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onButtonClickedScript: {fileID: 2046586595}
 --- !u!1001 &2050162478
 PrefabInstance:
   m_ObjectHideFlags: 0

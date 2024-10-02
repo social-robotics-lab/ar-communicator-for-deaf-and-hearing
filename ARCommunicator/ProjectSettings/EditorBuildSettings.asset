@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Project/Scenes/Test/Izawa/Sign&SpokenMotion.unity
     guid: f6a82330410c2a64888c3f614131a59f
+  - enabled: 1
+    path: Assets/Project/Scenes/Test/Kawabe/SettingsSampleScenes/SampleSettingsScene.unity
+    guid: 0e0c4f1d03d054191b4dd6b666bd9de6
+  - enabled: 1
+    path: Assets/Project/Scenes/Test/Kawabe/ResolveConflictSign&SpokenMotion.unity
+    guid: 2bdbb5d2d421e4285be5c1a8b214ce96
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 41081a89277f43c46a590353f189d3a2, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1c1ea02ce620446798dfb8dc55406fb9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b9a4faf4ac2284f389aa503d9f37f34f, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 681f77ac5e38ea6428d3ee6c617d46b9, type: 2}
