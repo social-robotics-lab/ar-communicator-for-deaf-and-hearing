@@ -24,6 +24,10 @@ public class AllAvatarsManagerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
+        myUserId = OnButtonClickedScript.userId;
+
+        Debug.Log($"My userId is {myUserId}.");
+
         VerifyAvatars(numberOfUsers, maleAvatars);
         VerifyAvatars(numberOfUsers, femaleAvatars);
 
@@ -51,9 +55,9 @@ public class AllAvatarsManagerScript : MonoBehaviour
             }
         }
 
-        if (avatars.Length < numberOfUsers - 1)
+        if (avatars.Length < numberOfUsers)
         {
-            Debug.LogError($"There are not enough avatars. At least {numberOfUsers - 1} avatars are required.");
+            Debug.LogError($"There are not enough avatars. At least {numberOfUsers} avatars are required.");
         }
     }
 
@@ -73,38 +77,32 @@ public class AllAvatarsManagerScript : MonoBehaviour
     {
         GetGenderScript GetGender = new GetGenderScript();
 
-        GameObject[] randomMaleAvatars = maleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
-        GameObject[] randomFemaleAvatars = femaleAvatars.OrderBy(i => Guid.NewGuid()).ToArray();
-
-        int maleCount = 0;
-        int femaleCount = 0;
-        foreach (string userId in userIds)
+        for(int i=0;i<numberOfUsers; i++)
         {
+            string gender = null;
+            string userId = userIds[i];
+
             if (userId != myUserId)
             {
                 try
                 {
-                    string gender = null;
                     gender = await GetGender.GetGenderAsync(userId);
                     if (gender != null)
                     {
                         if (gender == "m")
                         {
-                            randomMaleAvatars[maleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
-                            maleCount++;
+                            maleAvatars[i].GetComponent<AvatarControllerScript>().avatarUserId = userId;
                         }
                         else
                         {
-                            randomFemaleAvatars[femaleCount].GetComponent<AvatarControllerScript>().avatarUserId = userId;
-                            femaleCount++;
+                            femaleAvatars[i].GetComponent<AvatarControllerScript>().avatarUserId = userId;
                         }
                     }
                 }
-                catch (System.ArgumentNullException error)
+                catch(System.ArgumentNullException error)
                 {
                     Debug.LogError(error);
                 }
-
             }
         }
     }
