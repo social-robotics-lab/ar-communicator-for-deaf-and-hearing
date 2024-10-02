@@ -24,6 +24,10 @@ public class AllAvatarsManagerScript : MonoBehaviour
     // Start is called before the first frame update
     async void Start()
     {
+        myUserId = OnButtonClickedScript.userId;
+
+        Debug.Log($"My userId is {myUserId}.");
+
         VerifyAvatars(numberOfUsers, maleAvatars);
         VerifyAvatars(numberOfUsers, femaleAvatars);
 
