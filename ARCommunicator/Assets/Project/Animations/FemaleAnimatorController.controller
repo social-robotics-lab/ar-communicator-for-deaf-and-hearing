@@ -4609,6 +4609,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: SignMessageId
     m_EventTreshold: 55
+  - m_ConditionMode: 1
+    m_ConditionEvent: MotionTrigger
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2728959206489682818}
   m_Solo: 0
