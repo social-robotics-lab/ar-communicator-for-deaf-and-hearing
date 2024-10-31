@@ -7,6 +7,7 @@ public class AvatarController : MonoBehaviour
 
     public float moveSpeed = 1.0f;  // 移動スピード
     public float rotateSpeed = 60.0f;  // 回転スピード
+    private bool isControlEnabled = true;  // コントロールの有効・無効を管理
 
     void Start()
     {
@@ -16,14 +17,23 @@ public class AvatarController : MonoBehaviour
 
     void Update()
     {
+        // Bボタンでコントロールの有効/無効を切り替え
+        if (OVRInput.GetDown(OVRInput.Button.Two))  // Bボタン
+        {
+            isControlEnabled = !isControlEnabled;
+        }
+
         // Aボタンを押したときにアバターを切り替え
-        if (OVRInput.GetDown(OVRInput.Button.One))  // Aボタン
+        if (OVRInput.GetDown(OVRInput.Button.One) && isControlEnabled)  // Aボタン
         {
             SwitchAvatar();
         }
 
-        // 現在選択されているアバターを操作
-        ControlAvatar(avatars[currentAvatarIndex]);
+        // コントロールが有効な場合にのみアバターを操作
+        if (isControlEnabled)
+        {
+            ControlAvatar(avatars[currentAvatarIndex]);
+        }
     }
 
     // アバターの操作を切り替えるメソッド
