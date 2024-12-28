@@ -12,7 +12,7 @@
 
 ※アバター選択の切り替えは、ボタンを押すたびにFemale1 > Female2 > Female3 > Male1 > Male2 > Male3 > Female1......のようにループします。
 
-<img width=600 src="Images/AvatarPositonController.png">
+<kbd><img width=600 src="Images/AvatarPositonController.png"></kbd>
 
 ## ファイル構成
 ```
