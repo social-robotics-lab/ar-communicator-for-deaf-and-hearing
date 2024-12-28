@@ -1,5 +1,11 @@
 # AR Communicator For Deaf and Hearing
 
+<dev align="center">
+    <img width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img>
+</dev>
+<img width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/><img width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+
+
 ### 対応デバイス
 * MetaQuest3
 
@@ -69,7 +75,7 @@
 3. 任意のデータベースのロケーションを選択して、[完了] をクリックします。
 4. 下記のようにデータベースを設定します。
 
-    <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
+    <img width="180" alt="RealtimeDatabase" src="Documents/Images/QuickStart/RealtimeDatabase.png"></img>
 
 ## 5. :robot: AndroidアプリをFirebaseに登録する
 1. プロジェクトの概要ページの中央で、[Unityアイコン] をクリックして設定ワークフローを起動します。
@@ -123,13 +129,13 @@
 3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
 4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・組織名・プロジェクトIDと一致していることを確認します。
 
-    <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/UnityCloudServicesExample.png"></img>
 
 > [!NOTE]\
 > UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
 > 
 > プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
-> <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
+> <img width="600" src="Documents/Images/QuickStart/UnityCloudServicesSettings.png"></img>
 
 ## 12. :hammer_and_wrench: ビルド＆実行する
 > [!IMPORTANT]\
@@ -143,17 +149,17 @@
 1. [Edit] > [Project Settings] > [Meta XR] > [Android] を選択します。
 2. チェックリストに Outstanding Issues と Recommended Items がある場合、[Fix All] と [Apply All] を選択します。
 
-    <img width="600" src="Documents/Images/MetaXRChecklistExample.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/MetaXRChecklistExample.png"></img>
 
 3. [Edit] > [Project Settings] > [Player] > [Android] > [Other Settings] を選択します。
 4. Identification の Minimum API Level を [Android 12.0 (12L,API level 32)] 、Target API Level を [API level 34] に設定します。
 
-    <img width="600" src="Documents/Images/AndroidAPILevel.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/AndroidAPILevel.png"></img>
 
 5. [File] > [Build Settings] > [Android] を選択し、 [Switch Platform] をクリックします。
 6. Unityプロジェクトで、Scenes In BuildとAndroidビルド設定を以下のように変更します。
 
-    <img width="600" src="Documents/Images/BuildSettings.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/BuildSettings.png"></img>
 
 7. USB-Cケーブルを使用してMetaQuest3をコンピューターに接続します。
 8. Meta Quest3で、[Allow USB Debugging (USBデバッグを許可)]をクリックします。
