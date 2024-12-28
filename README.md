@@ -1,17 +1,36 @@
-# AR Communicator For Deaf and Hearing
+<h1 align="center">AR Communicator For Deaf and Hearing</h1>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=unity,cs,firebase,docker,react,ts" />
+  </a>
+</p>
+
+### システム概要
+<p>ユーザの会話相手にアバターを重ねて表示し、アバターが会話相手の使用するモダリティ（音声または手話）を、ユーザが使用するモダリティ（手話または音声）に変換して表出するシステム</p>
+
+<p align="center">
+    <kbd><img style="border: 10px solid black" width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img></kbd>
+</p>
+<p align="center">
+<kbd>
+    <img style="border: 10px solid black"  width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
+    <img style="border: 1px solid black"  width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+</kbd>
+</p>
 
 ### 対応デバイス
-* Meta Quest3
+* MetaQuest3
 
 ### 開発環境
-* MacBook (M2)
-* Windows 10
-* Windows 11
+* MacBook(M2)
+* Windows10
+* Windows11
 
 # 📚 ドキュメント
-**[:rocket: クイックスタート](#rocket-クイックスタート)**
-1. [:diamond_shape_with_a_dot_inside: Unityをインストールする](#1-diamond_shape_with_a_dot_inside-unityをインストールする)
-2. [:file_folder: プロジェクトを追加する](#2-file_folder-プロジェクトを追加する)
+### :rocket: クイックスタート
+1. [:diamond\_shape\_with\_a\_dot\_inside: Unityをインストールする](#1-diamond_shape_with_a_dot_inside-unityをインストールする)
+2. [:file\_folder: プロジェクトを追加する](#2-file_folder-プロジェクトを追加する)
 3. [:fire: Firebaseプロジェクトを作成する](#3-fire-firebaseプロジェクトを作成する)
 4. [:fire: Firebase Realtime Databaseを作成する](#4-fire-firebase-realtime-databaseを作成する)
 5. [:robot: AndroidアプリをFirebaseに登録する](#5-robot-androidアプリをfirebaseに登録する)
@@ -20,13 +39,14 @@
 8. [:package: 依存パッケージをインポートする](#8-package-依存パッケージをインポートする)
 9. [:runner: アバターのモーションを追加する](#9-runner-アバターのモーションを追加する)
 10. [:notebook: シナリオデータを追加する](#10-notebook-シナリオデータを追加する)
-11. [:cloud_with_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
-12. [:hammer_and_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド＆実行する)
+11. [:cloud\_with\_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
+12. [:hammer\_and\_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド実行する)
 
+### :book: マニュアル
+* [:book: マニュアル](Documents/ARCommunicator/Manual.md)
 
-**[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
-* [:books: ドキュメント](Documents/Operator/README.md#books-ドキュメント)
-* [:rocket: クイックスタート](Documents/Operator//README.md#rocket-クイックスタート)
+### :technologist: 操作画面の使用方法
+* [:technologist: 操作画面README](Documents/Operator/README.md)
 * [:book: 操作画面マニュアル](Documents/Operator/Manual.md)
 
 
@@ -70,7 +90,7 @@
 3. 任意のデータベースのロケーションを選択して、[完了] をクリックします。
 4. 下記のようにデータベースを設定します。
 
-    <img width="180" alt="RealtimeDatabase" src="Documents/Images/RealtimeDatabase.png"></img>
+    <img width="180" alt="RealtimeDatabase" src="Documents/Images/QuickStart/RealtimeDatabase.png"></img>
 
 ## 5. :robot: AndroidアプリをFirebaseに登録する
 1. プロジェクトの概要ページの中央で、[Unityアイコン] をクリックして設定ワークフローを起動します。
@@ -104,19 +124,19 @@
 ## 9. :runner: アバターのモーションを追加する
 > [!NOTE]\
 > [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) はアイドルモーションで使用しています。\
-> SignLanguageMotions.unitypackage は、研究室のNASからダウンロードしてください。
+> [ARCommunicatorMotions.1.0.0.unitypackage] を研究室のNASからダウンロードしてください。
 > 
 > モーションはインポート後に自動で設定されます。\
-> 設定が反映されない場合は、`Project/Animations/` フォルダの [Male Animation Controller] と [Female Animation Controller] の [Motion] すべてに、モーションファイルを手動でアタッチしてください。
+> 設定が反映されない場合は、`Project/Animations/MaleAnimationController.controller` と `Project/Animations/FemaleAnimationController.controller` のインスペクター上で各モーションに、モーションファイルを手動でアタッチしてください。
 
 1. Unity Asset Store から [Basic Sitting animation package](https://assetstore.unity.com/packages/3d/animations/basic-sitting-animation-package-219878) をプロジェクトにインポートします。
-2. [Assets] > [Import Package] > [Custom Package] から、 [SignLanguageMotions.unitypackage] をUnityプロジェクトにインポートします。
+2. [Assets] > [Import Package] > [Custom Package] から、 [ARCommunicatorMotions.1.0.0.unitypackage] をUnityプロジェクトにインポートします。
 
 ## 10. :notebook: シナリオデータを追加する
 > [!NOTE]\
-> Scenario.csvは研究室のNASからダウンロードしてください。
+> [ScenarioUnity.csv]は研究室のNASからダウンロードしてください。
 
-1. `Resources/` フォルダに [Scenario.csv] を追加します。
+1. `Resources/` フォルダに [ScenarioUnity.csv] を追加します。
 
 ## 11. :cloud_with_lightning: Unity Cloudと連携する
 1. Unity Hubでプロジェクトの右にあるメニューバーから、[Connect to Unity Cloud] を選択します。
@@ -124,13 +144,13 @@
 3. Unity Cloudでプロジェクト名・組織名・プロジェクトIDを確認します。
 4. Unityプロジェクトで、[Edit] > [Project Settings] > [Services] を選択して、Unity Cloudのプロジェクト名・組織名・プロジェクトIDと一致していることを確認します。
 
-    <img width="600" src="Documents/Images/UnityCloudServicesExample.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/UnityCloudServicesExample.png"></img>
 
 > [!NOTE]\
 > UnityプロジェクトをUnity Cloudと連携するには、Unity Cloudにあるこのプロジェクトのプロジェクトメンバーに参加しているアカウントで、Unityプロジェクトを開く必要があります。
 > 
 > プロジェクト名・組織名・プロジェクトIDが表示されない場合は、Unityプロジェクトを再起動するか、下記の画面で [Organization] と [Cloud project] を設定し、[Link Unity project to cloud project] を選択します。\
-> <img width="600" src="Documents/Images/UnityCloudServicesSettings.png"></img>
+> <img width="600" src="Documents/Images/QuickStart/UnityCloudServicesSettings.png"></img>
 
 ## 12. :hammer_and_wrench: ビルド＆実行する
 > [!IMPORTANT]\
@@ -144,16 +164,20 @@
 1. [Edit] > [Project Settings] > [Meta XR] > [Android] を選択します。
 2. チェックリストに Outstanding Issues と Recommended Items がある場合、[Fix All] と [Apply All] を選択します。
 
-    <img width="600" src="Documents/Images/MetaXRChecklistExample.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/MetaXRChecklistExample.png"></img>
 
 3. [Edit] > [Project Settings] > [Player] > [Android] > [Other Settings] を選択します。
 4. Identification の Minimum API Level を [Android 12.0 (12L,API level 32)] 、Target API Level を [API level 34] に設定します。
 
-    <img width="600" src="Documents/Images/AndroidAPILevel.png"></img>
+    <img width="600" src="Documents/Images/QuickStart/AndroidAPILevel.png"></img>
 
 5. [File] > [Build Settings] > [Android] を選択し、 [Switch Platform] をクリックします。
-6. USB-Cケーブルを使用してMeta Quest3をコンピューターに接続します。
-7. Meta Quest3で、[Allow USB Debugging (USBデバッグを許可)]をクリックします。
-8. Unityプロジェクトで、Scenes In BuildとAndroidビルド設定を以下のように変更します。
+6. Unityプロジェクトで、Scenes In BuildとAndroidビルド設定を以下のように変更します。
 
-9. [Build And Run] をクリックします。
+    <img width="600" src="Documents/Images/QuickStart/BuildSettings.png"></img>
+
+7. USB-Cケーブルを使用してMetaQuest3をコンピューターに接続します。
+8. Meta Quest3で、[Allow USB Debugging (USBデバッグを許可)]をクリックします。
+9. Androidビルド設定の [Run Device] を [MetaQuest3] に変更します。
+
+10. [Build And Run] をクリックします。

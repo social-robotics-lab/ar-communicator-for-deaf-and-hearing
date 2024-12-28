@@ -12,16 +12,11 @@
 * ホームページに記載されている `user1` `user2` `user3` は Firebase Realtime Database の `user1` `user2` `user3` と紐づいています。
 
 ## シナリオファイルについて
-1. Excelなどで下記のようなファイルを作成します。
+![ScenarioFileExample](Images/ScenarioFileExample.png)
 
-    ![ScenarioFileExample](Images/ScenarioFileExample.png)
-
-    * `id`列は１から昇順に値を入力してください。
-    * `user`列はどのユーザが話すかを数値で入力してください。数値（`1` `2` `3`）は Firebase Realtime Database のユーザ番号（`user1` `user2` `user3`）と紐づいています。
-    * `message`列はユーザが話す内容を入力してください。ここに書いた内容が操作画面のボタンに表示される文字＆ Firebse Realtime Database に送信される文字列になります。
-
-2. 作成したファイルをCSV形式でエクスポートしてください。
-3. 各ユーザ操作画面のシナリオデータからエクスポートしたファイル（CSV形式）を選択すると、操作画面のためのボタンが表示されます。
+* `id`：１から昇順の数値
+* `user`：発話するユーザ番号（1~3）。Firebase Realtime Database のユーザ番号（`user1` `user2` `user3`）と紐づいています。
+* `message`：ユーザが話す内容。ここに書いた内容が操作画面のボタンに表示される文字列と Firebse Realtime Database に送信される文字列になります。
 
 ## 各ユーザ操作画面のボタンについて
 * ボタンをクリックするとFirebase Realtime Database にボタンに表示された文字列が送信されます。
