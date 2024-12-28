@@ -9,29 +9,23 @@
 * Windows11
 
 # 📚 ドキュメント
-**[:rocket: クイックスタート](#rocket-クイックスタート)**
-- [AR Communicator For Deaf and Hearing](#ar-communicator-for-deaf-and-hearing)
-    - [対応デバイス](#対応デバイス)
-    - [開発環境](#開発環境)
-- [📚 ドキュメント](#-ドキュメント)
-- [:rocket: クイックスタート](#rocket-クイックスタート)
-  - [1. :diamond\_shape\_with\_a\_dot\_inside: Unityをインストールする](#1-diamond_shape_with_a_dot_inside-unityをインストールする)
-  - [2. :file\_folder: プロジェクトを追加する](#2-file_folder-プロジェクトを追加する)
-  - [3. :fire: Firebaseプロジェクトを作成する](#3-fire-firebaseプロジェクトを作成する)
-  - [4. :fire: Firebase Realtime Databaseを作成する](#4-fire-firebase-realtime-databaseを作成する)
-  - [5. :robot: AndroidアプリをFirebaseに登録する](#5-robot-androidアプリをfirebaseに登録する)
-  - [6. :wrench: Firebase構成ファイルを追加する](#6-wrench-firebase構成ファイルを追加する)
-  - [7. :toolbox: Firebase Unity SDKを追加する](#7-toolbox-firebase-unity-sdkを追加する)
-  - [8. :package: 依存パッケージをインポートする](#8-package-依存パッケージをインポートする)
-  - [9. :runner: アバターのモーションを追加する](#9-runner-アバターのモーションを追加する)
-  - [10. :notebook: シナリオデータを追加する](#10-notebook-シナリオデータを追加する)
-  - [11. :cloud\_with\_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
-  - [12. :hammer\_and\_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド実行する)
+### :rocket: クイックスタート
+1. [:diamond\_shape\_with\_a\_dot\_inside: Unityをインストールする](#1-diamond_shape_with_a_dot_inside-unityをインストールする)
+2. [:file\_folder: プロジェクトを追加する](#2-file_folder-プロジェクトを追加する)
+3. [:fire: Firebaseプロジェクトを作成する](#3-fire-firebaseプロジェクトを作成する)
+4. [:fire: Firebase Realtime Databaseを作成する](#4-fire-firebase-realtime-databaseを作成する)
+5. [:robot: AndroidアプリをFirebaseに登録する](#5-robot-androidアプリをfirebaseに登録する)
+6. [:wrench: Firebase構成ファイルを追加する](#6-wrench-firebase構成ファイルを追加する)
+7. [:toolbox: Firebase Unity SDKを追加する](#7-toolbox-firebase-unity-sdkを追加する)
+8. [:package: 依存パッケージをインポートする](#8-package-依存パッケージをインポートする)
+9. [:runner: アバターのモーションを追加する](#9-runner-アバターのモーションを追加する)
+10. [:notebook: シナリオデータを追加する](#10-notebook-シナリオデータを追加する)
+11. [:cloud\_with\_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
+12. [:hammer\_and\_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド実行する)
 
 
-**[:technologist: 操作画面の使用方法](Documents/Operator/README.md)**
-* [:books: ドキュメント](Documents/Operator/README.md#books-ドキュメント)
-* [:rocket: クイックスタート](Documents/Operator//README.md#rocket-クイックスタート)
+### :technologist: 操作画面の使用方法
+* [:technologist: 操作画面README](Documents/Operator/README.md)
 * [:book: 操作画面マニュアル](Documents/Operator/Manual.md)
 
 

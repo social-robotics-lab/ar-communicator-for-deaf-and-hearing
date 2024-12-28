@@ -65,3 +65,9 @@
     docker compose up --build
     ```
 3. コンテナが立ち上がったら、http://localhost:5173/ にアクセスします。
+
+## 5. :notebook: 操作画面からシナリオを読み込む
+> [!NOTE]\
+> [ScenarioOperator.csv]は研究室のNASからダウンロードしてください。
+1. 操作したいユーザの画面に移動します。
+2. [ScenarioOperator.csv]をアップロードします。
