@@ -42,6 +42,8 @@
 11. [:cloud\_with\_lightning: Unity Cloudと連携する](#11-cloud_with_lightning-unity-cloudと連携する)
 12. [:hammer\_and\_wrench: ビルド＆実行する](#12-hammer_and_wrench-ビルド実行する)
 
+### :book: マニュアル
+* [:book: マニュアル](Documents/ARCommunicator/Manual.md)
 
 ### :technologist: 操作画面の使用方法
 * [:technologist: 操作画面README](Documents/Operator/README.md)
