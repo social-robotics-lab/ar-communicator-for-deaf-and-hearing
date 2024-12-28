@@ -4239,7 +4239,7 @@ MonoBehaviour:
   saveIsDHHScript: {fileID: 2015398379}
   saveGenderScript: {fileID: 2015398378}
   displayCurrentUserId: {fileID: 923763793}
-  mainSceneName: CommunicationScene
+  mainSceneName: MainScene
 --- !u!114 &2046586596
 MonoBehaviour:
   m_ObjectHideFlags: 0
