@@ -3,7 +3,10 @@
 <dev align="center">
     <img width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img>
 </dev>
-<img width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/><img width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+<dev align="center">
+<img align="left" width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
+<img align="right" width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+</dev>
 
 
 ### 対応デバイス
