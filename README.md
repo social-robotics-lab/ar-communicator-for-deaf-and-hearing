@@ -1,13 +1,16 @@
 # AR Communicator For Deaf and Hearing
 
-<dev align="center">
-    <img width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img>
-</dev>
-<dev align="center">
-<img align="left" width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
-<img align="right" width="350" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
-</dev>
+### ArchitectureOverview
 
+<p align="center">
+    <img style="border: 1px solid black" width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img>
+</p>
+<p align="center">
+<img style="border: 1px solid black" align="left" width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
+<img style="border: 1px solid black" align="right" width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+</p>
+
+---
 
 ### 対応デバイス
 * MetaQuest3
