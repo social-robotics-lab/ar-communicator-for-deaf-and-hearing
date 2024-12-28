@@ -1,16 +1,23 @@
-# AR Communicator For Deaf and Hearing
-
-### ArchitectureOverview
+<h1 align="center">AR Communicator For Deaf and Hearing</h1>
 
 <p align="center">
-    <img style="border: 1px solid black" width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img>
-</p>
-<p align="center">
-<img style="border: 1px solid black" align="left" width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
-<img style="border: 1px solid black" align="right" width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=unity,cs,firebase,docker,react,ts" />
+  </a>
 </p>
 
----
+### システム概要
+<p>ユーザの会話相手にアバターを重ねて表示し、アバターが会話相手の使用するモダリティ（音声または手話）を、ユーザが使用するモダリティ（手話または音声）に変換して表出するシステム</p>
+
+<p align="center">
+    <kbd><img style="border: 10px solid black" width="600" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview.png"></img></kbd>
+</p>
+<p align="center">
+<kbd>
+    <img style="border: 10px solid black"  width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_DeafDevice.png"/>
+    <img style="border: 1px solid black"  width="49%" src="Documents/Images/SystemArchitectureOverview/SystemArchitectureOverview_HearingDevice.png"/>
+</kbd>
+</p>
 
 ### 対応デバイス
 * MetaQuest3
